@@ -1,0 +1,325 @@
+// column 3
+.columnBox-3
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  +mq
+    justify-content: center
+
+  .c-select-wrap--materialize--noArrow
+    .input-field--quaternary--signup
+      span.caret
+        display: block
+        z-index: 1
+
+
+.columnBox-3--inTable
+  @extend .columnBox-3
+  position: relative
+  padding: 0
+  +mq
+    padding: 0
+    justify-content: space-between
+
+.columnBox-3__child
+  +mq
+    width: 32%
+    margin-right: 2%
+    &:nth-of-type(3n)
+      margin-right: 0
+
+.columnBox-3__child--about
+  @extend .columnBox-3__child
+  position: relative
+  margin-top: 80px
+
+.columnBox-3--inTable__child
+  width: 30%
+  // padding-top: 7.5px
+  // padding-bottom: 7.5px
+  +mq
+    max-width: 155px
+  //   width: 170px
+  //   margin-right: 20px
+  // &:nth-child(3)
+  //   margin-right: 0
+// column 2
+.columnBox-2
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  padding: 20px
+  +mq
+    @include widthPC
+    padding: 10px
+  &--noSidePadding
+    @extend .columnBox-2
+    padding: 20px 0 20px
+
+.columnBox-2--bg
+  @extend .columnBox-2
+  background-color: $primary
+  +mq
+    background-color: $back
+
+.columnBox-2--inTable
+  @extend .columnBox-2
+  position: relative
+  padding: 0
+  +mq
+    padding: 0
+    justify-content: flex-start
+
+.columnBox-2--around
+  @extend .columnBox-2
+  justify-content: space-around
+  align-items: flex-start
+
+.columnBox-2--flexStart
+  @extend .columnBox-2
+  align-items: flex-start
+  +mq
+    justify-content: flex-start
+
+.columnBox-2__child
+  width: 49%
+  border-radius: 6px
+  &:nth-of-type(n + 3)
+    margin-top: 2vw
+    +mq
+      margin-top: 0
+  +mq
+    width: 23.5%
+
+.columnBox-2__child--checkbox
+  width: 49%
+  border-radius: 6px
+  &:nth-of-type(n + 3)
+    margin-top: 25px
+    +mq
+      margin-top: 0
+  +mq
+    width: 23.5%
+
+.columnBox-2__child--fix
+  @extend .columnBox-2__child
+  +hover
+  +mq
+    width: 49%
+
+.columnBox-2__child--shadow
+  @extend .columnBox-2__child
+  @include hover
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3)
+  +mq
+
+.columnBox-2__child--inImage
+  @extend .columnBox-2__child
+  @include hover
+  position: relative
+  height: 27vw
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3)
+  overflow: hidden
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    max-width: 100%
+    border-radius: 6px
+    transition: all 0.3s
+    +mq
+      border-radius: 0
+  &:hover
+    img
+      transform: scale(1.1)
+      transition: all 0.3s
+  +mq
+    height: 14vw
+    max-height: 160px
+    border-radius: 0
+
+.columnBox-2__child--blog
+  @extend .columnBox-2__child
+  width: 47%
+  margin-bottom: 20px
+  +mq
+    width: 22%
+    margin-bottom: 60px
+    margin-left: 4%
+    &:nth-of-type(4n+1)
+      margin-left: 0
+  > a
+    &:hover
+      .blogArchive-img
+        > img
+          transform: translate(-50%, -50%) scale(1.1)
+          transition: all .3s
+      .blogArchive-ttl
+        opacity: .8
+
+.columnBox-2__child--blog--job
+  @extend .columnBox-2__child--blog
+  +mq
+    width: 47%
+
+.columnBox-2__child--inImage__overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.4)
+  border-radius: 6px
+  z-index: 2
+  +mq
+    border-radius: 0
+
+.columnBox-2__child--inImage__text
+  position: absolute
+  top: 50%
+  left: 50%
+  color: $primary
+  transform: translate(-50%, -50%)
+  z-index: 3
+  text-align: center
+
+.columnBox-2--inTable__child--primary
+  width: 49%
+  padding-top: 7.5px
+  padding-bottom: 7.5px
+  +mq
+    width: auto
+    margin-right: 15px
+  &:before
+    position: absolute
+    font-size: 1.6rem
+    right: 0
+    top: 50%
+    color: $text__
+    line-height: 1
+    margin-top: -8px
+
+.columnBox-2--inTable__child--secondary
+  width: 49%
+  padding-top: 10px
+  padding-bottom: 10px
+
+.columnBox-2--inTable__child--tertiary
+  display: flex
+  align-items: center
+  width: 49%
+  padding-top: 10px
+  padding-bottom: 10px
+  .c-icon--facebook,
+  .c-icon--twitter
+    font-size: 20px
+    color: $primary_
+    margin-right: 10px
+    +mq
+      font-size: 24px
+// sidebar
+.columnBox-side--primary
+  display: flex
+  flex-wrap: wrap
+  padding-top: 20px
+  +mq
+    padding-top: 0
+  &__child
+    width: 50%
+    +mq
+      width: 100%
+      margin-top: 15px
+    &:nth-child(n+3)
+      margin-top: 25px
+      +mq
+        margin-top: 15px
+  .work_style_class
+    &--sub
+      font-size: 12px
+
+.columnBox-side--secondary
+  padding-top: 20px
+  +mq
+    padding-top: 0
+  &__child
+    width: 100%
+    +mq
+      margin-top: 15px
+    &:nth-child(n+2)
+      margin-top: 25px
+      +mq
+        margin-top: 15px
+  .work_style_class
+    &--sub
+      font-size: 12px
+
+.columnBox-side--tertiary
+  padding-top: 20px
+  +mq
+    padding-top: 0
+  &__child
+    width: 100%
+    +mq
+      margin-top: 15px
+    &:nth-child(n+2)
+      margin-top: 25px
+      +mq
+        margin-top: 15px
+  .work_style_class
+    &--sub
+      font-size: 12px
+// column 1
+.columnBox-1
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  width: 100%
+  +mq
+    align-items: flex-start
+
+.columnBox-1__child
+  width: 100%
+  border-radius: 6px
+  box-shadow: 0 6px 12px 0 $shadow__
+  &:nth-of-type(n + 2)
+    margin-top: 20px
+    +mq
+      margin-top: 0
+  &:nth-of-type(n + 3)
+    +mq
+      margin-top: 40px
+  +mq
+    width: 48%
+
+.columnBox-1--secondary
+  &__child
+    padding: 20px 0 0
+
+.columnBox-1--modal
+  margin-top: 20px
+  +mq
+    margin-top: 15px
+  &__child
+    width: 100%
+    &:nth-child(n+2)
+      margin-top: 25px
+
+.columnBox-2--modal
+  display: flex
+  flex-wrap: wrap
+  &--pl
+    @extend .columnBox-2--modal
+    padding-left: 3rem
+    +mq
+      padding-left: 2rem
+  &__child
+    width: 50%
+    padding-top: 20px
+    +mq
+      padding-top: 10px

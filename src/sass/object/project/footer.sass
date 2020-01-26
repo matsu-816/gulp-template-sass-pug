@@ -1,0 +1,74 @@
+.footer__inner
+	position: relative
+	width: 100%
+	padding-top: 40px
+	padding-bottom: 40px
+	+mq
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-top: 20px
+		padding-right: 40px
+		padding-bottom: 20px
+		padding-left: 40px
+
+.footer__menu
+	width: 200px
+	margin-right: auto
+	margin-left: auto
+	+mq
+		display: flex
+		flex-wrap: wrap
+		width: 70%
+		margin-right: 0
+		margin-left: 0
+
+.footer__menu__child
+	display: flex
+	justify-content: center
+	align-items: center
+	> a
+		color: $primary_
+		line-height: 2.3
+	+mq
+		padding-right: 8px
+		padding-left: 8px
+
+.footer__menu__child--sns
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 10px
+	& > a
+		display: block
+		color: $primary_
+		margin-left: 5px
+		&:first-of-type
+			margin-left: 0
+		+mq
+			+hover
+	+mq
+		margin-top: 0
+		& > a
+			&:first-of-type
+				margin-left: 10px
+
+.footer__bottom
+	text-align: center
+	+mq
+		display: flex
+		flex-direction: row-reverse
+
+.footer__logo
+	width: 130px
+	height: 22.5px
+	margin-right: auto
+	margin-left: auto
+	> img
+		width: 100%
+	+mq
+		width: 94px
+		margin-left: 15px
+
+.copyright
+	color: $text__

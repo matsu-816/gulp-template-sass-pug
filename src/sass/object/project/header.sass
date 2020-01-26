@@ -1,0 +1,332 @@
+.header__inner
+  position: relative
+  width: 100%
+  height: 70px
+  +mq
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-right: 30px
+    padding-left: 30px
+
+.header__logo
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 70px
+  z-index: 1
+  +mq
+    width: 100px
+    height: auto
+    justify-content: flex-start
+
+.header__logo__img
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  max-width: 120px
+  +mq
+    max-width: 100px
+    +hover
+  > img
+    max-width: 120px
+    +mq
+      max-width: 100px
+
+.header__menu
+  display: none
+  +mq
+    display: flex
+    align-items: center
+
+.header__menu__child
+  > a
+    padding-right: 25px
+    padding-left: 25px
+    color: $primary
+
+//header fix
+%header-fix
+  position: fixed
+  left: 0
+  width: 100%
+  height: 70px
+  background-color: $primary
+  z-index: 25
+  transition: all .3s
+
+.header--fix
+  @extend %header-fix
+  top: 0
+  height: 70px
+  box-shadow: 0 6px 12px 0 $shadow__
+  &--secondary
+    @extend .header--fix
+    background-color: $base___
+    .c-spMenu-btn--primary__bar
+      background-color: $primary
+    .c-spMenu-btn--primary__txt,
+    .c-spSearch-btn--primary .c-icon--search,
+    .header__menu--fix__child--left,
+    .c-button--login--header a,
+    .c-spMenu-btn--primary__bar
+      color: $base___
+    .c-icon--search:before,
+    .c-icon--star:before,
+    .c-icon--urumap:before,
+    .notice-text,
+    .header__menu--fix__child--left,
+    .c-spSearch-btn--primary__txt,
+    .c-spMenu-btn--primary__txt,
+    .header__menu--icon [class^="c-icon"],
+    .header__menu--icon [class^="c-icon"] .notice-text
+      color: $primary!important
+    .header__menu--icon [class^="c-icon"]
+      &:hover
+        color: $primary
+        opacity: .8
+        .notice-text
+          color: $primary
+    .c-button--login--header
+      border: none
+    .c-icon--urumap
+      color: $text__
+      .notice-text
+        color: $text__
+
+.header__menu--fix
+  @extend .header__menu
+  +mq
+    width: 210px
+
+.header__menu--fix__child--left
+  display: flex
+  align-items: center
+  padding-left: 20px
+  color: $primary_
+  .c-icon--search,
+  .c-icon--menu
+    color: $text__
+    font-size: 20px
+    margin-right: 6px
+
+.header__menu--fix__child--right
+  width: 110px
+  height: 30px
+  border-radius: 15px
+  background-color: $accent
+  color: $primary
+  box-shadow: 0 3px 6px 0 rgba(#000, 0.15)
+  display: none
+  justify-content: center
+  align-items: center
+  +hover
+  +mq
+    display: flex
+  .c-icon--search
+    font-size: 16px
+    margin-right: 7px
+    color: $text_
+
+.header__menu--fix__child--right--primary
+  @extend .header__menu--fix__child--right
+  background-color: #ff973a
+  color: #fff
+.header__menu--fix__child--right--secondary
+  @extend .header__menu--fix__child--right
+  background-color: #fedb41
+  color: $text_
+  .c-icon--search
+    color: $text_
+
+.header__leftBox,
+.header__rightBox
+  +mq
+    display: flex
+    align-items: center
+// toDo サイズが大と小があるからclass分けるかmixinで
+%notice-icon
+  .notice-count
+    display: none
+    position: absolute
+    width: 14px
+    height: 14px
+    border-radius: 50%
+    background-color: $secondary
+    font-size: 8px
+    color: $primary
+    line-height: 14px
+    text-align: center
+
+.header__menu--icon
+  display: none
+  +mq
+    display: flex
+  &--secondary
+    display: none
+    +mq
+      display: flex
+      margin-right: 20px
+      height: 32px
+    &:after
+      content: ''
+      border-right: 2px solid $primary__
+    .c-icon--urumap
+      transition: all .2s
+      position: relative
+      font-size: 28px
+      margin-right: 20px
+      transform: translateY(-.5rem)
+      color: $text__
+      display: flex
+      @extend %notice-icon
+      &:before
+        line-height: 32px
+      .notice-text
+        position: absolute
+        bottom: -9px
+        left: 50%
+        transform: translateX(-50%)
+        width: 62px
+        border-radius: 3px
+        line-height: 1
+        text-align: center
+        transition: all .2s
+        color: $text__
+      .notice-count
+        right: -5px
+        top: 1px
+      +hover
+  > a
+    display: block
+  .c-icon--mail,
+  .c-icon--memo,
+  .c-icon--group,
+  .c-icon--star,
+  .c-icon--urumap
+    height: 32px
+    transition: all .2s
+    &:before
+      line-height: 32px
+    .notice-text
+      position: absolute
+      bottom: -9px
+      left: 50%
+      transform: translateX(-50%)
+      width: 62px
+      border-radius: 3px
+      color: $primary_
+      line-height: 1
+      text-align: center
+      transition: all .2s
+
+    .c-tag--status-update
+      display: none
+      position: absolute
+      top: 4px
+      right: -8px
+    &:hover
+      color: $base_
+      .notice-text
+        color: $base_
+  .c-icon--group
+    position: relative
+    font-size: 32px
+    color: $primary_
+    margin-right: 26px
+    cursor: pointer
+    @extend %notice-icon
+    .notice-count
+      right: -5px
+      top: 1px
+
+  .c-icon--memo
+    position: relative
+    font-size: 24px
+    color: $primary_
+    margin-right: 43px
+    cursor: pointer
+    @extend %notice-icon
+    .notice-count
+      right: -5px
+      top: 1px
+
+  .c-icon--mail
+    position: relative
+    font-size: 26px
+    color: $primary_
+    margin-right: 40px
+    cursor: pointer
+    @extend %notice-icon
+    .notice-count
+      right: -5px
+      top: 1px
+
+  .c-icon--urumap
+    display: flex
+    position: relative
+    font-size: 28px
+    color: $primary_
+    margin-right: 15px
+    cursor: pointer
+    @extend %notice-icon
+    .notice-count
+      right: -5px
+      top: 1px
+
+  .c-icon--star
+    position: relative
+    font-size: 24px
+    color: $primary_
+    margin-right: 28px
+    cursor: pointer
+    @extend %notice-icon
+    .notice-count
+      right: -5px
+      top: 1px
+
+  .c-icon--human--profileImg
+    margin-left: 15px
+    cursor: pointer
+    +mq
+      +hover
+//is-loginでの切り替えは一旦なし
+//header menu login時、非ログイン時の切り替え
+//.is-login自体にはstyleつけないこと
+//.header--fix--top,.header--fix {
+//  .header__menu--icon,.menu-login {
+//    display: none;
+//  }
+//  &.is-login {
+//    .header__rightBox {
+//      .header__menu, .header__menu--fix {
+//        display: none;
+//      }
+//    }
+//    .menu-login {
+//      display: flex;
+//    }
+//    .header__menu--icon {
+//      display: flex;
+//      align-items: center;
+//    }
+//  }
+//}
+
+.header__menu--icon--secondary
+  .c-icon--urumap
+    display: flex
+
+//header アイコン通知の切り替え
+.c-spMenu-btn--primary,
+.c-icon--group,
+.c-icon--memo,
+.c-icon--mail,
+.c-icon--star,
+.c-icon--urumap
+  .notice-count,
+  .c-tag--status-update
+    &.is-active
+      display: block

@@ -1,0 +1,284 @@
+%messageBox
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	margin-top: 10px
+// jsでchatのdomを生成する。
+// dom生成のjsを汎用的にするためにcssはclient側とworker側を統一したい。
+// よってwrapperだけclass名を分けて、中のclass名は統一。nestしてスタイルをつける。
+
+//worker側
+.messageBox--worker
+	@extend %messageBox
+	flex-direction: row-reverse
+	.messageBox__img
+		margin-left: 15px
+	.messageBox__content
+		color: $primary
+	.messageBox__content__name
+		text-align: right
+	.messageBox__content__message
+		background: #4cd2dd
+		/* Old browsers
+		background: -moz-linear-gradient(-5deg, #4cd2dd 0%, #07e7e0 100%)
+		background: -webkit-linear-gradient(-55deg, #4cd2dd 0%, #07e7e0 100%)
+		background: linear-gradient(175deg, #4cd2dd 0%, #07e7e0 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cd2dd', endColorstr='#07e7e0', GradientType=1)
+	.messageBox__content__message__link
+		> a
+			color: $primary
+//client側
+.messageBox--client
+	@extend %messageBox
+	.messageBox__img
+		margin-right: 15px
+	.messageBox__content
+		color: $text
+	.messageBox__content__message
+		background-color: $back
+	.messageBox__content__message__link
+		> a
+			color: $primary_
+	.messageBox__content__message__date
+		color: $primary_
+
+.nothingMessage
+	padding: 45px 30px
+	+mq
+		padding-top: 80px
+		padding-bottom: 80px
+		text-align: center
+//共通
+.messageBox-wrap
+	padding-bottom: 30px
+	//height: 50vh;
+	min-height: 250px
+	//要素の高さを計算に使うとこ変数にしたほうがいいか。。。
+	max-height: calc(100vh - 70px - 126px)
+	overflow-y: scroll
+	//margin-top: -30px;
+	//&::-webkit-scrollbar {
+	//  display: none;
+	//}
+	+mq
+		min-height: 400px
+		max-height: 600px
+		margin-top: 0
+		padding-bottom: 60px
+
+.messageBox__img
+	position: relative
+	//display: flex;
+	//justify-content: center;
+	//align-items: center;
+	width: 40px
+	height: 40px
+	border: 1px solid $line
+	border-radius: 20px
+	overflow: hidden
+	z-index: 1
+	> img
+		+setCenter
+		height: 100%
+
+.messageBox__content
+	width: auto
+	max-width: 85%
+
+.messageBox__content__name
+	color: $primary_
+
+.messageBox__content__message
+	padding: 10px
+	border-radius: 6px
+	box-shadow: 0 3px 6px 0 $shadow__
+	word-wrap: break-word
+	> img
+		width: 100%
+		max-width: 300px
+
+.messageBox__content__message__link
+	text-align: right
+	> a
+		text-decoration: underline
+
+.messageBox__content__message__date
+	text-align: right
+//input field
+.messageInput
+	//position: fixed;
+	//position: absolute;
+	//bottom: 0;
+	//left: 0;
+	width: 100vw
+	//height: 100px;
+	margin-left: -15px
+	padding: 10px 15px
+	background-color: $primary
+	box-shadow: 0px -3px 6px 0px $shadow__
+	z-index: 20
+	textarea.materialize-textarea
+		padding-top: 5px
+		border: none
+		height: 2rem
+		&:focus
+			border: none
+			box-shadow: none
+	+mq
+		position: inherit
+		width: 100%
+		margin-left: 0
+		box-shadow: 0 1px 6px 0 $shadow__
+
+.messageNotes
+	display: none
+	+mq
+		display: block
+
+.messageInput__bottom
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: space-between
+	height: 40px
+	.c-button-square--xs--primary
+		position: absolute
+		right: 0
+		bottom: 0
+	.c-form--label--message
+		display: flex
+		align-items: center
+		max-width: 78%
+		color: $text__
+		cursor: pointer
+		&:before
+			content: "＋"
+			display: inline-block
+			width: 30px
+			height: 30px
+			margin-right: 10px
+			border: 3px solid $text__
+			text-align: center
+			font-size: 18px
+			font-weight: bold
+//btn
+.pageButton
+	width: 160px
+	margin-top: 10px
+	margin-right: auto
+	margin-left: auto
+	text-align: center
+	text-decoration: underline
+	font-size: 12px
+	cursor: pointer
+//reload
+.reloadBox
+	position: relative
+	height: 100%
+	min-height: 250px
+
+.reloadBox__inner
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	width: 100%
+	text-align: center
+//loading
+/*!
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2015 Tobias Ahlin
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+ * the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+ * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+ * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+ * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+.sk-cube-grid
+	position: relative
+	width: 30px
+	height: 30px
+	margin: 100px auto
+	margin-top: 70px
+	+mq
+		margin-top: 180px
+	.c-icon--urumap
+		position: absolute
+		z-index: 1
+		color: #FFF
+		width: 30px
+		height: 30px
+		text-align: center
+		line-height: 30px
+		font-size: 23px
+
+.sk-cube-grid .sk-cube
+	width: 33%
+	height: 33%
+	background-color: $base
+	float: left
+	-webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out
+	animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out
+
+.sk-cube-grid .sk-cube1
+	-webkit-animation-delay: 0.2s
+	animation-delay: 0.2s
+
+.sk-cube-grid .sk-cube2
+	-webkit-animation-delay: 0.3s
+	animation-delay: 0.3s
+
+.sk-cube-grid .sk-cube3
+	-webkit-animation-delay: 0.4s
+	animation-delay: 0.4s
+
+.sk-cube-grid .sk-cube4
+	-webkit-animation-delay: 0.1s
+	animation-delay: 0.1s
+
+.sk-cube-grid .sk-cube5
+	-webkit-animation-delay: 0.2s
+	animation-delay: 0.2s
+
+.sk-cube-grid .sk-cube6
+	-webkit-animation-delay: 0.3s
+	animation-delay: 0.3s
+
+.sk-cube-grid .sk-cube7
+	-webkit-animation-delay: 0s
+	animation-delay: 0s
+
+.sk-cube-grid .sk-cube8
+	-webkit-animation-delay: 0.1s
+	animation-delay: 0.1s
+
+.sk-cube-grid .sk-cube9
+	-webkit-animation-delay: 0.2s
+	animation-delay: 0.2s
+
+@-webkit-keyframes sk-cubeGridScaleDelay
+	0%, 70%, 100%
+		-webkit-transform: scale3D(1, 1, 1)
+		transform: scale3D(1, 1, 1)
+	35%
+		-webkit-transform: scale3D(0, 0, 1)
+		transform: scale3D(0, 0, 1)
+
+@keyframes sk-cubeGridScaleDelay
+	0%, 70%, 100%
+		-webkit-transform: scale3D(1, 1, 1)
+		transform: scale3D(1, 1, 1)
+	35%
+		-webkit-transform: scale3D(0, 0, 1)
+		transform: scale3D(0, 0, 1)

@@ -1,0 +1,129 @@
+=hover
+	transition: all .3s
+	&:hover
+		opacity: .8
+		text-decoration: none
+		transition: all .3s
+
+=hoverLighten($color)
+	transition: all .3s
+	&:hover
+		background-color: lighten($color, 10%)
+		text-decoration: none
+		transition: all .3s
+
+=ellipsis
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+
+=lineClamp($fontSize, $lineHeight, $line)
+	overflow: hidden
+	display: -webkit-box
+	-webkit-box-orient: vertical
+	word-break: break-all
+	height: $fontSize * $lineHeight * $line + px
+	-webkit-line-clamp: $line
+	line-clamp: $line
+	box-orient: vertical
+	word-wrap: break-word
+
+=widthPC
+	max-width: 1080px
+	margin-right: auto
+	margin-left: auto
+
+=setCenter
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%) translate3d(0, 0, 0)
+
+//media query
+//〜768px,769px〜
+$mq-breakpoints: ("medium": 769px)
+=mq($breakpoint: medium)
+	@media screen and (min-width: #{map-get($mq-breakpoints, $breakpoint)})
+		@content
+=mq-l()
+  @media screen and (min-width: 1900px)
+    @content
+// 500以下
+=mq-m()
+  @media screen and (max-width: 500px)
+    @content
+// 370以下
+=mq-ms()
+  @media screen and (max-width: 370px)
+    @content
+// 321以下
+=mq-small()
+  @media screen and (max-width: 321px)
+    @content
+//animation
+=keyframes($name)
+	@keyframes #{$name}
+		@content
+
+=animation($name)
+	animation: $name
+	animation-fill-mode: both
+	
+=placeholderColor($color,$size)
+	&:placeholder-shown
+		color: $color
+		font-size: $size
+
+	// Webkit
+	&::-webkit-input-placeholder
+		color: $color
+		font-size: $size
+		opacity: 1
+
+	// Firefox 18-
+	&:-moz-placeholder
+		color: $color
+		font-size: $size
+
+	// Firefox 19+
+	&::-moz-placeholder
+		color: $color
+		font-size: $size
+		opacity: 1
+
+	// IE 10+
+	&:-ms-input-placeholder
+		color: $color
+		font-size: $size
+
++keyframes(menuBar01)
+	0%
+		-webkit-transform: translateY(8px) rotate(45deg)
+	50%
+		-webkit-transform: translateY(8px) rotate(0)
+	100%
+		-webkit-transform: translateY(0) rotate(0)
+
++keyframes(menuBar03)
+	0%
+		-webkit-transform: translateY(-8px) rotate(-45deg)
+	50%
+		-webkit-transform: translateY(-8px) rotate(0)
+	100%
+		-webkit-transform: translateY(0) rotate(0)
+
++keyframes(menuBar01-active)
+	0%
+		transform: translateY(0) rotate(0)
+	50%
+		transform: translateY(8px) rotate(0)
+	100%
+		transform: translateY(8px) rotate(45deg)
+
++keyframes(menuBar03-active)
+	0%
+		transform: translateY(0) rotate(0)
+	50%
+		transform: translateY(-8px) rotate(0)
+	100%
+		transform: translateY(-8px) rotate(-45deg)

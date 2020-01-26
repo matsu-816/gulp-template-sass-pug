@@ -1,0 +1,210 @@
+/* Slider
+.sliderBox
+	width: 100%
+	padding-top: 5px
+	padding-bottom: 20px
+	+mq
+		max-width: 1080px
+		margin-right: auto
+		margin-left: auto
+		padding-bottom: 0
+		overflow: hidden
+	&__search
+		+mq
+			max-width: 740px
+
+.sliderBox--secondary
+	@extend .sliderBox
+	.c-tag--category--ms
+		background-color: $base___
+		border-bottom: none
+	.c-title--jobList
+		color: $base___
+
+.slider--primary__child
+	outline: none
+	.c-list--job__content__clientInfo
+		width: 100%
+		+mq
+			width: 100%
+		> span
+			width: 80%
+			+mq
+				width: 80%
+
+.slider--secondary__child
+	position: relative
+	//max-height: 275px;
+	outline: none
+	.c-tag--support
+		position: absolute
+		top: -15px
+		left: -15px
+		z-index: 10
+
+.slider--secondary__child--inImage
+	outline: none
+	height: 210px
+	// background-color: $back
+	&:nth-child(2)
+		margin: 0 15px
+	+mq
+		height: 210px
+		// background-color: $back
+	> img
+		margin-right: auto
+		margin-left: auto
+		+mq
+			width: 100%
+			height: 210px
+	&__body
+		width: 100%
+		height: 100%
+		background-position: 50% 50%
+		background-size: contain
+		background-repeat: no-repeat
+
+.slider--secondary__child--about
+	@extend .slider--secondary__child
+	box-shadow: 0 6px 12px 0 $shadow__
+	border-radius: 6px
+	overflow: hidden
+	+mq
+		width: 30%
+		max-width: 300px
+		margin-right: 0
+		margin-left: 0
+//お仕事イメージが2行になったら↓使う
+//margin-bottom: 50px;
+
+.slider--secondary__child__inner
+	//height: 260px;
+	padding: 25px 17px
+	box-shadow: 0 6px 12px 0 $shadow__
+	background-color: $primary
+	border-radius: 6px
+	.c-icon--chat,
+	.c-icon--paper,
+	.c-icon--human_02,
+	.c-icon--phone
+		color: $primary_
+		text-align: center
+		font-size: 90px
+		line-height: 1
+
+.-secondary__child__inner__ttl
+	color: $base
+	text-align: center
+	margin-top: 15px
+	&--secondary
+		color: $base___
+		text-align: center
+		margin-top: 15px
+
+.-secondary__child__inner__txt
+	color: $text
+
+.slider--secondary
+	padding-top: 15px
+	.slick-list
+		padding-bottom: 20px
+
+.slider--secondary--jobDetail
+	.slick-slide
+		max-width: calc(100vw - 50px)
+	.slick-track
+		display: flex
+	.slick-slide
+		float: none
+		padding-bottom: 0
+	img
+		max-height: 210px
+		width: auto
+
+.slider--secondary--about
+	@extend .slider--secondary
+	.slick-track
+		display: flex
+	+mq
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		align-items: center
+
+.slick-slider
+	position: relative
+	display: block
+	box-sizing: border-box
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	-ms-touch-action: pan-y
+	touch-action: pan-y
+	-webkit-tap-highlight-color: transparent
+
+.slick-list
+	position: relative
+	//overflow: hidden;
+	display: block
+	margin: 0
+	padding: 0
+	&:focus
+		outline: none
+	&.dragging
+		cursor: pointer
+		cursor: hand
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+	-webkit-transform: translate3d(0, 0, 0)
+	-moz-transform: translate3d(0, 0, 0)
+	-ms-transform: translate3d(0, 0, 0)
+	-o-transform: translate3d(0, 0, 0)
+	transform: translate3d(0, 0, 0)
+
+.slick-track
+	position: relative
+	left: 0
+	top: 0
+	display: block
+	//margin-left: auto;
+	//margin-right: auto;
+	//padding-bottom: 20px;
+
+	&:before,
+	&:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+	.slick-loading &
+		visibility: hidden
+
+.slick-slide
+	float: left
+	//height: 100%;
+	min-height: 1px
+	padding-bottom: 20px
+	[dir="rtl"] &
+		float: right
+	img
+		display: block
+	&.slick-loading img
+		display: none
+	display: none
+	&.dragging img
+		pointer-events: none
+	.slick-initialized &
+		display: block
+	.slick-loading &
+		visibility: hidden
+	.slick-vertical &
+		display: block
+		height: auto
+		border: 1px solid transparent
+
+.slick-arrow.slick-hidden
+	display: none

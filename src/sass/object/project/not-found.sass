@@ -1,0 +1,75 @@
+.contentsBox--notFound
+	position: relative
+	height: 100vh
+	background-image: url("../images/common/bg_404.png")
+	background-size: cover
+	background-repeat: repeat-x
+	background-position: center center
+	background-color: $base
+	color: $primary
+	+mq
+		padding-top: 130px
+		padding-bottom: 100px
+	@media (min-width: 1080px)
+		background-size: contain
+
+.contentsBox--notFound__inner
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	margin: auto
+	width: 100%
+	height: 480px
+	padding-right: 20px
+	padding-left: 20px
+	+mq
+		height: 340px
+
+.contentsBox--notFound__img
+	max-width: 452px
+	margin-right: auto
+	margin-left: auto
+	padding-right: 15px
+	padding-left: 15px
+	> svg
+		width: 100%
+
+.contentsBox--notFound__logo
+	display: none
+	+mq
+		position: absolute
+		bottom: 20px
+		left: 50%
+		transform: translateX(-50%)
+		display: block
+		> img
+			width: 120px
+
+.contentsBox--notFound__txt
+	color: $primary
+
+.contentsBox--notFound__txt--sub
+	@extend .contentsBox--notFound__txt
+	line-height: 1.6
+	> a
+		color: $primary
+		text-decoration: underline
+		&:hover
+			opacity: .8
+
+.contentsBox--notFound__txt--number
+	font-family: 'Hiragino Sans', sans-serif
+	font-size: 100px
+	font-weight: 100
+	line-height: 1
+	+mq
+		font-size: 126px
+	> svg
+		width: 70px
+		height: 70px
+		margin-left: -10px
+
+.contentsBox--notFound__txt--errorMessage
+	line-height: 1

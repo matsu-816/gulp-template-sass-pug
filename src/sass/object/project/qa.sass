@@ -1,0 +1,44 @@
+//TOPページのqaのスタイル
+.qaBox-question
+	padding: 15px 15px 15px 45px
+	background-color: $back
+	color: $base
+	font-weight: bold
+	+mq
+		display: flex
+		align-items: center
+		height: 100px
+		padding-left: 50px
+
+.qaBox-question__inner
+	position: relative
+	&:before
+		content: "Q"
+		position: absolute
+		top: 0
+		left: -25px
+		font-size: 21px
+		line-height: 1
+		+mq
+			left: -30px
+
+.qaBox-answer
+	position: relative
+	padding: 15px 20px 30px 45px
+	+mq
+		padding: 40px 25px 50px 50px
+
+.qaBox-answer__ttl
+	font-weight: bold
+
+.qaBox-answer__ttl__inner
+	position: relative
+	&:before
+		content: "A"
+		position: absolute
+		top: 0
+		left: -25px
+		font-size: 21px
+		line-height: 1
+		+mq
+			left: -30px

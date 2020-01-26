@@ -1,0 +1,168 @@
+.jobDetail
+  &__outline
+    width: 100%
+    border-radius: 3px
+    background-color: #fffaf6
+    border: solid 1px #ff9107
+    padding: 20px
+    +mq
+      padding: 30px 50px
+  &__ttl
+    font-size: 18px
+    font-weight: bold
+    color: $accent
+    margin: 0
+    +mq
+      font-size: 16px
+  &__data
+    font-size: 14px
+    color: $text
+    margin-top: 10px
+  &__btn
+    &__body
+      font-size: 17px
+      +mq
+        font-size: 14px
+  &__modal
+    .c-button-square--full--primary
+      width: 100%
+      +mq
+        width: 250px
+
+.jobDetail-notice
+  padding-top: 18px
+  border-top: 1px solid $line
+
+.dataBox
+  position: absolute
+  top: 0
+  left: 15px
+  color: $primary_
+  line-height: 20px
+  > .c-tag--status-01,
+  > .c-tag--status-02,
+  > .c-tag--status-03,
+  > .c-tag--status-04,
+  > .c-tag--status-05,
+  > .c-tag--status-06,
+  > .c-tag--status-07
+    margin-right: 10px
+  > .c-tag--new
+    line-height: 1
+    height: auto
+  +mq
+    position: inherit
+
+.statusBox
+  position: absolute
+  top: 0
+  right: 15px
+  +mq
+    position: relative
+  //margin-right: 15px;
+
+  .c-tag--status-update
+    position: absolute
+    left: -13px
+    top: 50%
+    transform: translateY(-50%)
+    +mq
+      left: -11px
+
+.pager
+  border-top: 1px solid $primary__
+  border-bottom: 1px solid $primary__
+  +mq
+    @include widthPC
+    display: flex
+    justify-content: flex-end
+    border: none
+
+.pager__inner
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 15px
+  +mq
+    width: 220px
+    padding-right: 0
+    padding-left: 0
+
+.pager__num
+  display: flex
+  justify-content: space-between
+  align-items: baseline
+  > a
+    color: $text__
+    &:hover
+      color: $base
+
+.pager__num__child
+  padding-right: 10px
+  padding-left: 10px
+  font-size: 16px
+  color: $text__
+  +mq
+    font-size: 14px
+  &.is-current
+    font-size: 21px
+    color: $base
+    +mq
+      font-size: 16px
+
+%arrowDouble
+  @extend .c-icon--arrow_01
+
+.pager__arrow--prev,
+.pager__arrow--next
+  > a
+    color: $text__
+    &:hover
+      color: $base
+  > span
+    color: $primary__
+
+.pager__arrow--prev
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +mq
+    width: 25px
+  .c-icon--arrow_01
+    &:before
+      font-size: 20px
+      transform: rotate(90deg)
+      +mq
+        font-size: 15px
+  .c-icon--arrow_05
+    &:before
+      font-size: 20px
+      +mq
+        font-size: 15px
+
+.pager__arrow--next
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +mq
+    width: 25px
+  .c-icon--arrow_01
+    &:before
+      font-size: 20px
+      transform: rotate(-90deg)
+      +mq
+        font-size: 15px
+
+  .c-icon--arrow_05
+    &:before
+      font-size: 20px
+      transform: rotate(180deg)
+      +mq
+        font-size: 15px
+
+//entry
+.entryError
+  display: none
+  width: 100%
+  color: $secondary
+  font-size: 12px

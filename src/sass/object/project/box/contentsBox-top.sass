@@ -1,0 +1,1103 @@
+//contentsBox
+.contentsBox
+  +mq
+    max-width: 1080px
+    margin: 0 auto
+.contentsBox--padding
+  padding-right: 15px
+  padding-left: 15px
+  +mq
+    @include widthPC
+    padding-right: 30px
+    padding-left: 30px
+  .c-title--center
+    color: $base
+  .title-subTxt
+    color: $primary_
+    line-height: 1.6
+
+.contentsBox--padding--secondary
+  padding-right: 30px
+  padding-left: 30px
+  +mq
+    @include widthPC
+    padding-right: 30px
+    padding-left: 30px
+  .c-title--center
+    color: $base
+  .title-subTxt
+    color: $primary_
+    line-height: 1.6
+
+.contentsBox--signup
+  padding-right: 15px
+  padding-left: 15px
+  +mq
+    max-width: 580px
+    padding-right: 30px
+    padding-left: 30px
+    margin: auto
+
+  .title-subTxt
+    color: $primary_
+    line-height: 1.6
+
+.contentsBox--keyvisual
+  height: 440px
+  padding: 90px 20px 30px
+  background-image: url("../images/top/keyvisual.png")
+  background-repeat: repeat-x
+  background-position: bottom center
+  color: $primary
+  display: flex
+  align-items: center
+  flex-direction: column
+  +mq
+    height: 520px
+    padding-top: 90px
+    padding-bottom: 100px
+  &--secondary
+    @extend .contentsBox--keyvisual
+    background-image: url("../images/campaign/lp/img_kv.jpg")
+    background-size: cover
+  &__btn
+    padding-top: 30px
+  &--tertiary
+    height: 390px
+    padding: 70px 20px 30px
+    background-image: url("../images/top/keyvisual.png")
+    background-repeat: repeat-x
+    background-position: bottom right 2800px
+    // background-position: botttom center
+    color: $primary
+    display: flex
+    align-items: center
+    flex-direction: column
+    +mq
+      height: 520px
+      padding-top: 90px
+      padding-bottom: 100px
+
+.contentsBox--keyvisual__txt
+  font-weight: bold
+
+.contentsBox--keyvisual__heading
+  display: flex
+  flex-direction: column
+  align-items: center
+  +mq
+    flex-direction: row
+
+.contentsBox--keyvisual--btn
+  .c-button-oval--top-page
+    background-color: #fedb41
+
+.contentsBox--keyvisual__heading__txt
+  font-size: 24px
+  text-align: center
+  line-height: 1.5
+  > span
+    font-size: 25px
+    +mq
+      font-size: 48px
+  &--secondary
+    @extend .contentsBox--keyvisual__heading__txt
+    font-size: 3.4rem
+    +mq
+      font-size: 4.8rem
+
+.contentsBox--keyvisual__subTxt
+  font-size: 25px
+  text-align: center
+  &--secondary
+    +mq
+      font-size: 2.2rem
+      text-align: center
+
+.contentsBox--keyvisual__searchTxt
+  display: none
+  +mq
+    display: flex
+    align-items: center
+    width: 740px
+    margin-right: auto
+    margin-left: auto
+    .c-tag--secondary
+      margin-left: 25px
+
+.contentsBox--borderTop
+  border-top: 1px solid $primary__
+  +mq
+    border-top: none
+
+.contentsBox--primary
+  background-color: $primary
+  .c-title--center
+    color: $base
+
+.contentsBox--primary__inner
+  padding: 50px 20px 60px
+  +mq
+    @include widthPC
+    padding: 120px 20px
+
+.contentsBox--secondary
+  background-color: $back
+  +mq
+    background-color: inherit
+  .c-title--center--contents
+    border-bottom: none
+  .c-title--center--content__subTxt
+    color: $text
+  .linkArchive
+    +mq
+      margin-top: -20px
+
+.contentsBox--secondary__inner
+  padding: 20px 0 50px
+  +mq
+    padding: 20px 20px 0
+
+.contentsBox--tertiary__inner
+  padding: 50px 0
+  +mq
+    padding: 60px 20px
+
+.contentsBox--gradate
+  padding: 50px 0 80px
+  background: url("../images/about/about_bg_02_sp.png"), linear-gradient(175deg, #4cd2dd, #07e7e0)
+  background-repeat: no-repeat, no-repeat
+  background-position: 0 30px, 0 0
+  background-size: 100%, auto
+  +mq
+    padding: 100px 0 120px
+    background: url("../images/about/about_bg_02.png"), linear-gradient(175deg, #4cd2dd, #07e7e0)
+    background-repeat: no-repeat, no-repeat
+    background-position: center 70px, 0 0
+    background-size: 1200px, auto
+  .c-title--center, .title-subTxt
+    color: $primary
+  .contentsBox--gradate__btnBox
+    padding-right: 30px
+    padding-left: 30px
+    +mq
+      text-align: center
+
+.contentsBox--topMessage
+  background-color: $secondary
+  padding-top: 15px
+  padding-bottom: 15px
+  text-align: center
+  color: $primary
+  transition: all .3s
+  +mq
+    padding-top: 20px
+    padding-bottom: 20px
+    font-weight: bold
+  &:hover
+    opacity: .8
+    transition: all .3s
+
+.contentsBox--topSearchResult
+  padding: 10px 0 0
+  display: flex
+  flex-direction: column
+  color: $primary_
+  +mq
+    // flex-direction: row
+    padding: 0
+  &__heading
+    margin: 20px 0 30px
+    padding: 0 20px
+    font-weight: bold
+    color: #333333
+    line-height: 1.5
+    +mq
+      margin: 0 0 30px
+      padding: 0
+  &__body
+    display: flex
+    align-items: flex-end
+    padding-left: 20px
+    +mq
+      display: flex
+      flex: 1
+      align-items: center
+      padding: 0
+      font-size: 12px
+  &__em
+    font-weight: bold
+    font-size: 13px
+    margin-right: 15px
+    // +lineClamp(11, 1.7, 2)
+    +lineClamp(11, 1, 2)
+    +mq
+      font-size: 18px
+      margin-right: 15px
+      margin-left: 0
+      // +lineClamp(18, 1.7, 1)
+      +lineClamp(18, 1, 2)
+
+  &__result
+    font-size: 11px
+    padding-right: 15px
+    white-space: nowrap
+  &__count
+    font-size: 11px
+    border-top: 1px solid $primary__
+    margin-top: 15px
+    text-align: right
+    padding: 10px 15px 0
+    +mq
+      border-top: none
+      padding: 0
+      margin-top: 0
+      font-size: 12px
+    &__em
+      font-weight: bold
+      font-size: 17px
+      padding-right: .5rem
+      +mq
+        font-size: 18px
+
+.contentsBox--footBtn-wrap
+  position: relative
+  height: 20vw
+  // height: 25vw
+  +mq
+    padding: 0
+    margin-top: 0
+    height: 95px
+
+.contentsBox--footBtn
+  position: fixed
+  left: 0
+  bottom: 30px
+  display: flex
+  justify-content: space-between
+  width: 100%
+  min-height: 50px
+  padding-right: 15px
+  padding-left: 15px
+  transition: opacity .3s
+  pointer-events: none
+  opacity: 0
+  +mq
+    padding-right: 30px
+    padding-left: 30px
+
+.contentsBox--companyInfo
+  padding: 30px 15px 15px
+  border: 1px solid $primary__
+  color: $primary_
+  +mq
+    padding: 40px
+
+.contentsBox--companyInfo__txt
+  line-height: 1.7
+
+.contentsBox--companyInfo__foot
+  +mq
+    display: flex
+
+.contentsBox--companyInfo__foot__img
+  > img
+    max-width: 100%
+    box-shadow: 0 3px 12px 0 $shadow__
+  +mq
+    width: 220px
+
+.contentsBox--companyInfo__foot__content
+  +mq
+    padding-top: 10px
+    padding-left: 40px
+  > ul
+    line-height: 1.7
+    +mq
+      margin-bottom: 40px
+      li
+        margin-top: 10px
+
+.-companyInfo__foot__content__ttl
+  line-height: 1
+  > span
+    padding-left: 8px
+
+.contentsBox--search
+  .c-list--jobBox
+    border-bottom: none
+    +mq
+      &:last-of-type
+        border-bottom: 1px dashed $line
+  .c-tag--category--s
+    font-size: 12px
+    +mq
+      width: 45px
+      padding: 0 5px
+      font-size: 11px
+  .c-title--jobList--sub
+    padding: 0
+    margin-top: 15px
+    line-height: 1.6
+    white-space: normal
+    +mq
+      margin-top: 0
+      max-width: 58rem
+      white-space: nowrap
+      display: block
+    &__body
+      +lineClamp(18, 1.6, 2)
+      +mq
+        @include ellipsis
+        display: block
+  .c-list-wrap
+    +mq
+      padding: 30px
+  .c-list--job--sub__head .-job--sub__head__leftBox
+    max-width: 100%
+  .btnBox
+    +mq
+      position: static
+      display: flex
+      justify-content: flex-end
+  .c-list--job--sub__content__txt
+    padding-bottom: 0
+  .-job--sub__head__wrap
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column-reverse
+    margin-top: 15px
+    padding: 0 15px
+    +mq
+      flex-wrap: nowrap
+      align-items: center
+      flex-direction: row
+      width: 100%
+      margin-top: 0
+      padding: 0
+  .-job--sub__head__wrap--secondary
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    padding: 0 15px
+    +mq
+      flex-wrap: nowrap
+      flex-direction: column
+      width: 100%
+      padding: 0
+
+  .-job--sub__head__leftBox
+    .c-tag--genre-01
+      margin: 5px 5px 0 0
+      +mq
+        margin: 0 5px 0 0
+
+  .-job--sub__head__rightBox
+    // padding-right: 15px
+    // margin-left: auto
+    +mq
+      order: 3
+      padding-right: 0
+      margin-left: auto
+    &__inner
+      +mq
+        display: flex
+        align-items: center
+  .c-tag--new
+    background-color: transparent
+    color: $secondary
+    font-size: 11px
+  .u-fs--xs--date
+    color: $primary_
+    font-size: 10px
+    +mq
+      font-size: 12px
+  .c-list--tagList
+    +mq
+      order: 1
+      flex: auto
+      padding: 0
+  .c-list--tagList__child
+    margin: 0
+    display: flex
+    +mq
+      align-items: center
+    &:first-of-type
+      border-bottom: 1px solid $line
+      +mq
+        border: 0
+    &:nth-of-type(2)
+      +mq
+        margin-left: 20px
+    &__wrap
+      padding: 10px
+      +mq
+        display: flex
+        padding: 0
+    &__date
+      display: flex
+      align-items: center
+      color: $text
+      padding: 10px
+      +mq
+        padding: 0
+        margin-left: 10px
+        line-height: 1
+    &__price
+      color: $secondary
+      font-weight: bold
+      +mq
+        margin-left: 10px
+    &__detail
+      font-size: 12px
+      color: $primary_
+      display: block
+      +mq
+        margin-left: 10px
+        display: flex
+        align-items: center
+        line-height: 1
+  .c-title--jobList--sub
+    border-bottom: none
+    +mq
+      order: 2
+      padding-top: 0
+      margin-left: 10px
+  .c-list--tagList
+    margin-top: 0
+    flex: 1
+  .c-list--tagList > span
+    margin-top: 0
+  .c-tag--primary--s
+    background-color: $back
+    font-weight: bold
+    border-style: solid
+    border-width: 0 1px 0 0
+    border-radius: 0
+    border-color: $line
+    padding: 10px
+    height: auto
+    margin-right: 0
+    min-width: 45px
+    +mq
+      border-width: 1px
+      border-radius: 1.5px
+      height: 20px
+      padding: 0 5px
+      display: flex
+      align-items: center
+      justify-content: center
+  .c-list--job--sub__content .c-list--tagList
+    border-style: solid
+    border-width: 1px
+    border-radius: 3px
+    border-color: $line
+    +mq
+      border: 0
+      margin-top: 20px
+  .c-title--jobList--sub
+    padding-bottom: 0
+    +mq
+      flex: 1
+  .c-tag--primary--s
+    display: flex
+    align-items: center
+  +mq
+    @include widthPC
+
+.contentsBox--jobDetail
+  @extend .contentsBox--search
+  padding: 0 15px 0
+  .c-button-square--full--quarternary
+    width: 100%
+    display: flex
+    align-items: center
+    padding: 0 20px
+  .c-tag--primary--s
+    min-width: 86px
+    justify-content: center
+  +mq
+    padding: 0 30px 0
+  .c-list--job--sub
+    padding-top: 0
+  .c-list--job__content__clientInfo
+    width: 100%
+    flex-wrap: wrap
+    +mq
+      flex-wrap: nowrap
+  .clientLogo--s
+    flex: 0 0 40px
+  .c-list-wrap,
+  .c-list-wrap--noborder
+    padding: 0
+  .btnBox--dashboard
+    position: static
+    width: 100%
+  .c-list--job--sub__content
+    padding-top: 0
+    +mq
+      display: flex
+  .c-title--jobList--sub
+    padding: 0
+    margin-top: 0
+    line-height: 1.6
+    white-space: normal
+    +mq
+      margin-top: 0
+      max-width: 58rem
+      white-space: nowrap
+      display: block
+    &__body
+      line-height: 1.33
+      margin-top: 0
+      +lineClamp(1.33, 16.5, 3)
+      +mq
+        @include ellipsis
+        display: block
+        font-size: 18px
+        height: auto
+        margin: 15px 0 0
+
+.contentsBox--searchResult
+  color: $primary_
+  +mq
+    @include widthPC
+    display: flex
+    justify-content: space-between
+
+.contentsBox--searchResult__leftBox
+  padding-right: 15px
+  padding-left: 15px
+  padding-bottom: 15px
+  border-bottom: 1px solid $primary__
+  line-height: 1
+  +mq
+    border: none
+    padding: 0
+
+.contentsBox--searchResult__rightBox
+  padding-top: 10px
+  padding-right: 15px
+  padding-left: 15px
+  line-height: 1
+  text-align: right
+  +mq
+    padding: 0
+
+.contentsBox--statusSort
+  padding: 20px 20px 10px
+  border-bottom: 1px solid $line
+  +mq
+    @include widthPC
+    padding: 0
+    border-bottom: none
+
+//お仕事なしの場合
+.contentsBox__nothing
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-content: center
+  min-height: 250px
+  padding: 100px 30px
+  border-top: 1px dashed $line
+  margin-top: 30px
+  .c-button-square--full--primary
+    .c-icon--search
+      position: absolute
+      top: 50%
+      left: 20px
+      transform: translateY(-50%)
+      font-size: 20px
+
+.contentsBox__nothing__ttl
+  width: 100%
+  color: $text
+  text-align: center
+
+.contentsBox__nothing__subTtl
+  width: 100%
+  color: $text__
+  text-align: center
+
+.contentsBox__nothing__txt
+  width: 100%
+  color: $primary_
+  +mq
+    text-align: center
+//login
+.contentsBox__login
+  min-height: 50vh
+  .c-title--border
+    color: $base
+  +mq
+    max-width: 320px
+    margin-right: auto
+    margin-left: auto
+
+.contentsBox__login__txt
+  color: $primary_
+  +mq
+    max-width: 350px
+    margin-right: auto
+    margin-left: auto
+    text-align: center
+
+.contentsBox__login__txt--forgot
+  text-align: right
+  > a
+    color: $base
+
+.contentsBox__login__error
+  color: $secondary
+
+.contentsBox__login--modal
+  @extend .contentsBox__login
+  .btnBox
+    display: flex
+    justify-content: center
+//pages
+.contentsBox--page
+  padding-right: 20px
+  padding-left: 20px
+  +mq
+    max-width: 675px
+    margin-right: auto
+    margin-left: auto
+    padding-bottom: 70px
+
+.-page__content__ttl
+  font-weight: bold
+
+.-page__content__txt
+  line-height: 1.7
+  > p
+    margin-top: 10px
+  span
+    display: inline-block
+    padding-top: 5px
+    padding-bottom: 5px
+  .u-indent-1
+    padding-left: 1em
+  .u-indent-2
+    padding-left: 2em
+//チャット
+.contentsBox--message
+  display: none
+  +mq
+    display: block
+//チャットページ上部の正式依頼状況
+.contentsBox--messageNotice
+
+%contentsBox--messageNotice__top
+  position: relative
+  display: flex
+  align-items: center
+  height: 60px
+  padding-left: 95px
+  color: $primary
+  overflow: hidden
+  +mq
+    height: 50px
+    justify-content: center
+
+.contentsBox--messageNotice__top
+  @extend %contentsBox--messageNotice__top
+  background-color: $base
+  .contentsBox--messageNotice__status
+    background-color: $base_
+
+.contentsBox--messageNotice__top--complete
+  @extend %contentsBox--messageNotice__top
+  background-color: $secondary
+  .contentsBox--messageNotice__status
+    background-color: $secondary_
+
+.contentsBox--messageNotice__status
+  position: absolute
+  top: 50%
+  left: 0
+  display: flex
+  align-items: center
+  width: 120px
+  height: 120px
+  padding-left: 40px
+  border-radius: 50%
+  transform: translate(-40px, -50%)
+  > span
+    display: block
+    width: 100%
+    text-align: center
+  > h1
+    display: block
+    width: 100%
+    text-align: center
+  +mq
+    line-height: 50px
+
+.contentsBox--messageNotice__txt
+  > span
+    &:first-of-type
+      margin-right: 20px
+
+.contentsBox--messageNotice__bottom
+  background-color: $back
+
+.contentsBox--messageNotice__bottom__inner
+  padding: 20px 30px 30px 30px
+  +mq
+    max-width: 580px
+    margin-right: auto
+    margin-left: auto
+    padding-right: 0
+    padding-left: 0
+    padding-bottom: 20px
+
+.contentsBox--messageNotice__bottom__ttl
+  padding-bottom: 10px
+  border-bottom: 1px solid $line
+  line-height: 1
+  color: $text
+
+.contentsBox--messageNotice__bottom__txt
+  padding-top: 10px
+  padding-bottom: 10px
+  color: $text
+
+.contentsBox--messageNotice__bottom__btnBox
+  .c-button-square--full--primary
+    margin-bottom: 10px
+  +mq
+    display: flex
+    justify-content: center
+    flex-direction: row-reverse
+    .c-button-square--full--primary
+      margin-bottom: 0
+      margin-left: 20px
+
+.contentsBox--messageNotice__bottom__statusTxt
+  display: none
+
+.contentsBox--notFound--mailCertificate
+  margin-right: auto
+  margin-left: auto
+  padding-right: 15px
+  padding-left: 15px
+  +mq
+    max-width: 580px
+    padding-right: 0
+    padding-left: 0
+
+.contentsBox--staticPage
+  margin-right: auto
+  margin-left: auto
+  +mq
+    max-width: 580px
+// profile入力用
+.contentsBox--profile__inner
+  display: -ms-grid
+  display: grid
+  //IEでgrid-gap使えない。marginでやるしかない
+  //grid-gap: 20px;
+  //grid-template-columns: 36% 64%;
+  grid-template-columns: 1fr 2fr
+  grid-template-rows: auto auto
+  //-ms-grid-columns: 36% 64%;
+  -ms-grid-columns: 1fr 2fr
+  -ms-grid-rows: auto auto
+  padding: 0 20px
+  +mq
+    max-width: 640px
+    margin-right: auto
+    margin-left: auto
+    grid-template-columns: 40% 60%
+    -ms-grid-columns: 40% 60%
+
+%contentsBox--profile__img
+  grid-row: auto
+  -ms-grid-column: 1
+  -ms-grid-row: 1
+  -ms-grid-row-span: 1
+  padding-top: 10px
+  -ms-grid-column-align: center
+  justify-self: center
+  +mq
+    grid-row: 1 / 3
+    -ms-grid-row-span: 2
+    align-self: center
+    -ms-grid-row-align: center
+
+.contentsBox--profile__img
+  @extend %contentsBox--profile__img
+  position: relative
+  padding: 4px
+  z-index: 1
+  overflow: hidden
+  width: 100px
+  height: 100px
+  border-radius: 50%
+  background-color: $line
+  +mq
+    width: 220px
+    height: 220px
+
+.contentsBox--profile__img__item
+  width: 97%
+  height: 97%
+  border-radius: 50%
+  +setCenter
+
+.contentsBox--profile__txt
+  -ms-grid-column: 2
+  -ms-grid-row: 1
+  -ms-grid-row-align: center
+  align-self: center
+  padding-left: 20px
+  +mq
+    padding-left: 30px
+
+.contentsBox--profile__cv
+  grid-column: 1 / 3
+  -ms-grid-column: 1
+  -ms-grid-column-span: 2
+  -ms-grid-row: 2
+  margin-top: 30px
+  +mq
+    grid-column: auto
+    -ms-grid-column: 2
+    -ms-grid-column-span: 1
+    padding-left: 30px
+    margin-top: 0
+  .c-button-square--full--primary
+    border-radius: 3px
+    +mq
+      border-radius: 2px
+
+.contentsBox--movie
+  padding-top: 20px
+  +mq
+    padding-top: 40px
+  &--embed
+    max-width: 832px
+    margin: 0 auto
+    &__inner
+      position: relative
+      padding-bottom: 56.25%
+      height: 0
+      overflow: hidden
+      & iframe
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 100%
+  &--secondary
+    @extend .contentsBox--movie
+    padding-top: 0
+    +mq
+      padding-top: 90px
+    .movieBox__btn
+      background-color: $base___
+
+.contentsBox--supplement
+  padding: 30px
+  background-color: $back
+  border: 1px solid $line
+  &__body
+    &:nth-child(n+2)
+      margin-top: 1rem
+  &__ttl
+    font-size: 1.4rem
+    font-weight: bold
+    margin: 0
+    &:nth-child(n+2)
+      margin-top: 35px
+    & + .contentsBox--supplement__body
+      margin-top: 1rem
+  &__wrap
+    max-width: 1082px
+    margin: 0 auto
+    padding: 0 17px
+    @media (min-width: 1098px)
+      padding: 0
+
+.movieBox
+  height: 250px
+  overflow: hidden
+  position: relative
+  background: url("/images/common/movie_bg.jpg") no-repeat top center
+  background-size: cover
+  +mq
+    height: 390px
+
+.movieBox__movie
+  display: none
+  width: 140%
+  height: auto
+  position: absolute
+  top: -50%
+  right: -50%
+  bottom: -50%
+  left: -50%
+  margin: auto
+  +mq
+    display: block
+    width: 100%
+
+.movieBox__overlay
+  width: 100%
+  height: 100%
+  background-image: url("/images/common/pattern.png")
+  background-repeat: repeat
+  background-color: transparent
+  background-position: 0 0
+  position: relative
+  z-index: 2
+
+.movieBox__ttl
+  color: $primary
+  font-size: 21px
+  font-weight: bold
+  text-align: center
+  margin: 0
+  padding-top: 58px
+  text-shadow: 1.1px 1.1px 2px rgba(0, 0, 0, 0.4)
+  +mq
+    font-size: 22px
+    padding-top: 100px
+    text-shadow: 2.1px 2.1px 4px rgba(0, 0, 0, 0.4)
+
+.movieBox__btn
+  background-color: $base
+  text-align: center
+  border-radius: 50%
+  margin: 39.5px auto 0
+  width: 70px
+  height: 70px
+  padding: 0 20px
+  user-select: none
+  box-shadow: 0 6px 6px 0 rgba(4, 0, 0, 0.2)
+  i
+    color: $primary
+    vertical-align: middle
+    font-size: 36px
+    line-height: 70px
+  +mq
+    width: 120px
+    height: 120px
+    margin-top: 49px
+    padding: 0 35px
+    box-shadow: 0 12px 12px 0 rgba(4, 0, 0, 0.15)
+    transition: all 0.6s
+    cursor: pointer
+    &:hover
+      opacity: 0.8
+    i
+      font-size: 57px
+      line-height: 120px
+
+.contentsBox--info
+  background-color: $back
+  padding: 20px
+  +mq
+    min-height: 60px
+    padding: 0
+    a
+      color: $text
+      transition: all 0.6s
+      &:hover
+        opacity: .8
+
+.contentsBox--info__inner
+  +mq
+    max-width: 1080px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    height: 60px
+
+.contentsBox--info__inner__link
+  display: none
+  +mq
+    display: block
+    flex: 0 1 auto
+    width: 140px
+    line-height: 18px
+    border-left: 2px solid $line
+    padding-left: 20px
+  .c-icon--arrow_05
+    display: inline-block
+    margin-left: 12px
+    transform: rotate(180deg)
+
+.contentsBox--container
+  +mq
+    display: flex
+    justify-content: center
+
+.infoSliderWrap
+  margin: 0 auto
+  position: relative
+  overflow: hidden
+  height: 70px
+  +mq
+    width: calc(100% - 160px)
+    height: 22px
+
+.infoSlider
+  overflow: hidden
+  height: 70px
+  position: relative
+  width: 100%
+  +mq
+    height: 22px
+    margin-right: 20px
+
+.infoSlider__item
+  width: 100%
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+
+.infoSlider__item__inner
+  +mq
+    display: flex
+
+.infoSlider__item__tag
+  display: inline-block
+  margin-right: 10.5px
+  +mq
+    flex: 1 0 100px
+    max-width: 100px
+    padding-right: 20px
+
+.infoSlider__item__date
+  display: inline-block
+  color: $primary_
+  +mq
+    margin-right: 20px
+
+.infoSlider__item__ttl
+  max-height: 3.2em
+  margin-top: 8px
+  overflow: hidden
+  width: 100%
+  p
+    color: $text
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+  +mq
+    margin-top: 0
+    height: auto
+    p
+      display: block
+      text-overflow: ellipsis
+      overflow: hidden
+      white-space: nowrap
+
+
+.c-list-wrap--noborder
+  &:last-of-type
+    border-bottom: none

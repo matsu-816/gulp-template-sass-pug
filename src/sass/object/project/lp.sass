@@ -1,0 +1,1838 @@
+//LP風ページ（styleが独自であるようなページ）
+
+//about
+.about
+  padding-bottom: 0
+  .footer
+    border-top: none
+    position: static
+  &__kv
+    height: 66 * 2vw
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    +mq
+      height: 520px
+      width: 1280px
+    @media (min-width: 1280px)
+      width: 100%
+    &__inner
+      padding: 0 30px
+    &__heading
+      font-size: 24px
+      line-height: 1.29
+      text-shadow: 0 2px 8px rgba(4, 0, 0, 0.6)
+      font-weight: bold
+      +mq
+        font-size: 48px
+        line-height: 1.29
+        margin: 0
+    &__overview
+      font-size: 14px
+      margin-top: 25px
+      line-height: 1.71
+      text-align: center
+      text-shadow: 0 2px 8px rgba(4, 0, 0, 0.6)
+      font-weight: bold
+      +mq
+        font-size: 18px
+        line-height: 2
+        margin-top: 35px
+    &__bg
+      display: block
+      height: 66 * 2vw
+      width: 100%
+      +mq
+        display: flex
+        flex-direction: row
+        height: 520px
+      &--primary
+        background-image: url("../images/about/main_1.jpg")
+        background-size: cover
+        display: block
+        width: 100%
+        height: 66vw
+        +mq
+          height: 520px
+          width: 50%
+          background-position: 50% 0
+      &--secondary
+        @extend .about__kv__bg--primary
+        background-image: url("../images/about/main_2.jpg")
+    &__inner
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 66 * 2vw
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      color: #fff
+      +mq
+        height: 520px
+      .c-button-oval--full--quarternary
+        margin-top: 40px
+        +mq
+          margin-top: 50px
+  &__example
+    background-image: linear-gradient(to bottom, #4cd2dd, #07e7e0)
+    padding-bottom: 50px
+    margin-top: 80px
+    +mq
+      padding-bottom: 100px
+    &__inner
+      background-image: url("../images/about/about_bg_02_sp.png")
+      background-repeat: no-repeat
+      background-size: auto
+      background-position: 50% 30px
+      +mq
+        background-image: url("../images/about/about_bg_02.png")
+        background-position: 50% 70px
+    &__heading
+      color: #fff
+      text-align: center
+      padding-top: 50px
+      margin: 0
+      +mq
+        padding-top: 100px
+        font-size: 26px
+    .title-subTxt
+      color: #fff
+    &__note
+      font-size: 10px
+      color: #fff
+      text-align: center
+      margin-top: 20px
+      +mq
+        text-align: right
+        width: 980px
+        margin: 20px auto 0
+    &__box
+      background-color: #fff
+      border-radius: 6px
+      margin: 30px 30px 0
+      padding: 30px
+      color: $text
+      box-shadow: 0 2px 8px 0 rgba(4, 0, 0, 0.2)
+      +mq
+        padding: 45px
+        width: 50%
+      &:nth-child(1)
+        +mq
+          margin: 0 20px 0 0
+      &:nth-child(2)
+        +mq
+          margin: 0 0 0 20px
+      &__wrap
+        margin-top: 30px
+        +mq
+          display: flex
+          width: 980px
+          margin: 60px auto 0
+    &__ttl
+      display: flex
+      &.is-male
+        &:before
+          content: ''
+          display: block
+          width: 60px
+          height: 60px
+          flex: 0 0 60px
+          border-radius: 50%
+          background-image: url("../images/about/example_male.jpg")
+          background-size: cover
+          +mq
+            width: 80px
+            height: 80px
+            flex: 0 0 80px
+      &.is-female
+        &:before
+          @extend .about__example__ttl.is-male:before
+          background-image: url("../images/about/example_female.jpg")
+      &__wrap
+        margin-left: 10px
+        +mq
+          margin-left: 20px
+          display: flex
+          flex-direction: column
+          justify-content: center
+      &__supp
+        font-size: 12px
+      &__body
+        margin-top: 5px
+        font-weight: bold
+        &__em
+          font-size: 16px
+          color: $secondary
+    &__data
+      margin-top: 15px
+      +mq
+        margin-top: 20px
+  &__example--secondary
+    @extend .about__example
+    background-image: linear-gradient(to bottom, #3861a7, #3d98c9)
+  &__support
+    .c-title--center
+      color: $base
+    &__inner
+      background-image: url("../images/about/support.jpg")
+      background-size: cover
+      background-position: 28% 0
+      margin-top: 30px
+      width: 100vw
+      height: 100vw
+      display: flex
+      align-items: flex-end
+      justify-content: flex-end
+      +mq
+        align-items: flex-start
+        height: 470px
+        margin-top: 35px
+      @media (min-width: 890px)
+        width: 890px
+        margin: 35px auto 0
+    &__box
+      background-color: rgba($base, 0.85)
+      box-shadow: 0 3px 8px 0 rgba(4, 0, 0, 0.16)
+      margin: 0 10px 0 0
+      padding: 30px 20px
+      width: 57vw
+      color: #fff
+      transform: translateY(20px)
+      +mq
+        font-size: 48px
+        width: 340px
+        padding: 45px
+        transform: translateY(60px)
+      @media (min-width: 910px)
+        transform: translate(90px, 60px)
+    &__ttl
+      +mq
+        display: flex
+        align-items: flex-end
+        line-height: 1
+      &__body
+        font-size: 26px
+      &__supp
+        font-size: 14px
+        +mq
+          margin-left: 10px
+    &__data
+      margin-top: 15px
+      +mq
+        margin-top: 25px
+      &__body
+        font-size: 14px
+    &__body
+      font-size: 14px
+      color: $text
+      margin-top: 40px
+      padding: 0 30px
+      text-align: center
+  &__support--secondary
+    @extend .about__support
+    .c-title--center
+      color: $base___
+    .about__support__box
+      background-color: rgba($base___, 0.85)
+  &__flow
+    .c-title--center
+      color: $base
+  &__full-comm
+    background-image: linear-gradient(to bottom, #4cd2dd, #07e7e0)
+    padding: 50px 30px 22vw
+    +mq
+      margin-top: 100px
+      padding: 100px 100px 157px
+    &__heading
+      font-size: 14px
+      font-weight: bold
+      color: #fff
+      margin-top: 0
+    &__body
+      font-size: 14px
+      color: #fff
+
+//containerBox
+.containerBox--about
+  overflow-x: hidden
+
+.contentsBox--keyvisual--about__wrap
+  position: relative
+  height: 580px
+  overflow: hidden
+  +mq
+    height: 520px
+  & + .contentsBox--gradate
+    margin-top: -20px
+    padding-top: 60px
+    +mq
+      height: 290px
+      padding-top: 120px
+      margin-top: -60px
+
+.contentsBox--keyvisual--about
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  width: 100vw
+  height: 580px
+  padding: 70px 20px 30px
+  background-image: url("../images/about/about_kv_sp.png")
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  color: $primary
+  +mq
+    background-image: url("../images/about/about_kv.png")
+    height: 520px
+    padding-top: 130px
+    padding-bottom: 100px
+  .contentsBox--keyvisual__txt, .contentsBox--keyvisual__subTxt
+    text-shadow: 0 2px 8px $textShadow
+  .contentsBox--keyvisual__txt
+    font-size: 24px
+    +mq
+      position: absolute
+      top: 37%
+      left: 50%
+      transform: translateX(-50%)
+      width: 100%
+      font-size: 48px
+  .contentsBox--keyvisual__subTxt
+    +mq
+      position: absolute
+      bottom: 70px
+      width: 100%
+
+.contentsBox--tertiary__inner--cercle
+  position: absolute
+  bottom: 0
+  left: 50%
+  width: 900vw
+  height: 900vw
+  border-radius: 50%
+  background-color: $base
+  transform: translateX(-50%)
+  overflow: hidden
+  +mq
+    width: 12000px
+    height: 12000px
+  @media screen and (min-width: 1600px)
+    width: 15000px
+    height: 15000px
+
+.contentsBox--about
+  width: 100%
+  padding: 80px 30px 0
+  color: $text
+  .c-title--center
+    color: $base
+  .title-subTxt
+    +mq
+      text-align: center
+
+.contentsBox--about__inner
+  max-width: 1020px
+  margin-right: auto
+  margin-left: auto
+  > .c-button-oval--full--primary
+    display: block
+    margin-right: auto
+    margin-left: auto
+
+.contentsBox--about--btnBox
+  width: 100%
+  padding-right: 30px
+  padding-left: 30px
+  margin-top: -30px
+  +mq
+    max-width: 320px
+    margin-top: -25px
+    margin-right: auto
+    margin-left: auto
+    padding-left: 0
+//chara
+.aboutCharaBox
+  position: relative
+  padding: 50px 40px 40px
+  box-shadow: 0 8px 6px 0 $shadow__
+  background-color: $primary
+  z-index: 1
+  +mq
+    height: 393px
+    box-shadow: 0 2px 8px 0 $shadow__
+  @media (min-width: 825px)
+    height: 345px
+  @media (min-width: 858px)
+    height: 323px
+  @media (min-width: 1066px)
+    height: 268px
+
+.aboutCharaBox--bg
+  position: absolute
+  top: -5px
+  left: 10px
+  width: calc(100% - 20px)
+  height: calc(100% + 10px)
+  padding: 35px 40px
+  z-index: 0
+  background-color: $primary__
+  +mq
+    top: 0
+
+.aboutCharaBox__ttl
+  color: $text
+
+.aboutCharaBox__txt
+  color: $primary_
+
+.aboutCharaBox__icon
+  position: absolute
+  top: -30px
+  left: 50%
+  transform: translateX(-50%)
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  .c-icon--map_02,
+  .c-icon--clock,
+  .c-icon--graph_02,
+  .c-icon--bag,
+  .c-icon--talk
+    color: $base
+    font-size: 35px
+    z-index: 4
+
+%aboutCharaBox__icon
+  position: absolute
+  width: 60px
+  height: 60px
+  border-radius: 50%
+
+.aboutCharaBox__icon__bg01
+  @extend %aboutCharaBox__icon
+  top: 0
+  left: 0
+  background-color: $primary
+  box-shadow: 0 8px 6px 0 $shadow__
+  z-index: 3
+
+.aboutCharaBox__icon__bg02
+  @extend %aboutCharaBox__icon
+  top: -10px
+  left: 0
+  background-color: #5bb6dd
+  z-index: 2
+
+.aboutCharaBox__icon__bg03
+  @extend %aboutCharaBox__icon
+  top: 0
+  left: 10px
+  background-color: #38dbde
+  z-index: 1
+//lifestyle
+.contentsBox--lifestyle__keyvisual
+  width: 100%
+  height: 42.5vw
+  background-image: url("../images/about/lifestyle_kv_sp.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  +mq
+    height: 280px
+    background-image: url("../images/about/lifestyle_kv.jpg")
+    background-position: center
+    background-color: $back
+  @media screen and (min-width: 1280px)
+    background-size: contain
+
+.lifestyleFlow
+  width: 100%
+  +mq
+    position: relative
+    max-width: 680px
+    margin-right: auto
+    margin-left: auto
+    padding: 40px 60px
+    box-shadow: 0 6px 12px 0 $shadow__
+    background-color: $primary
+    margin-top: -170px
+
+.lifestyleFlow__inner
+  padding: 45px 30px
+  +mq
+    padding: 0
+
+.lifestyleFlow__messageBox
+  width: 265px
+  margin-top: -50px
+  margin-right: auto
+  margin-left: auto
+  padding: 15px 25px
+  box-shadow: 0 3px 6px 0 $shadow__
+  background-image: linear-gradient(175deg, #4cd2dd, #07e7e0)
+  color: $primary
+  line-height: 2.2
+  +mq
+    position: absolute
+    top: -50px
+    right: -50px
+    width: 320px
+    margin-top: 0
+    padding: 27.5px 40px
+    box-shadow: 0 6px 12px 0 $shadow__
+
+.lifestyleFlow__profile
+  display: flex
+  align-items: center
+
+.lifestyleFlow__profile__img
+  position: relative
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  overflow: hidden
+  z-index: 1
+  > img
+    width: 100%
+    height: 100%
+    +setCenter
+
+.lifestyleFlow__profile__txt
+  margin-left: 20px
+  > span
+    display: block
+    color: $primary_
+
+.lifestyleFlow__ttl
+  color: $text
+
+.lifestyleFlow__jobFlow
+  width: 100%
+
+.lifestyleFlow__jobFlow__head
+  padding: 20px 30px
+  background-color: $back
+  width: 100vw
+  +mq
+    font-weight: bold
+
+.jobFlowBox
+  padding: 30px 30px 30px 55px
+  +mq
+    max-width: 560px
+    padding: 40px 20px 0 30px
+
+.jobFlowBox__inner
+  padding-left: 35px
+  border-left: 1px solid $primary__
+  +mq
+    padding-left: 25px
+    border-left: 2px solid $primary__
+
+.jobFlowBox__content
+  position: relative
+  &:last-of-type
+    top: 35px
+
+.jobFlowBox__content__time
+  display: flex
+  align-items: center
+  margin-left: -43.5px
+  color: $base
+  &:before
+    content: ""
+    display: inline-block
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    margin-right: 27.5px
+    background-color: $base
+    +mq
+      display: none
+  +mq
+    display: inline-block
+    width: 40px
+    //margin-left: -55px;
+    text-align: right
+    background-color: $primary
+
+.jobFlowBox__content__ttl
+  font-weight: bold
+  color: $text
+  +mq
+    display: inline-block
+    padding-left: 50px
+    font-weight: normal
+
+.jobFlowBox__content__text
+  color: $primary_
+  line-height: 1.85
+  +mq
+    padding-left: 50px
+    line-height: 2.3
+
+.jobFlowBox__period
+  position: relative
+  height: 35px
+  margin-left: -35px
+  padding-left: 35px
+  line-height: 35px
+  box-shadow: 0 6px 6px 0 $shadow__
+  background-image: linear-gradient(175deg, #4cd2dd, #07e7e0)
+  color: $primary
+  +mq
+    width: 210px
+    left: -102px
+    padding-right: 25px
+    text-align: right
+    //border-radius: 5px 0 0 0;
+    &:before
+      content: ""
+      display: inline-block
+      position: absolute
+      bottom: -13px
+      left: 6px
+      width: 28px
+      height: 28px
+      box-shadow: 0 2px 8px 0 rgba(4, 0, 0, 0.2)
+      background-color: #53b5bc
+      transform: rotate(40deg)
+      z-index: -1
+
+%jobFlowBox__img
+  position: absolute
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  overflow: hidden
+  z-index: 1
+  box-shadow: 0 8px 6px 0 rgba(4, 0, 0, 0.2)
+  > img
+    width: 100%
+    height: 100%
+    +setCenter
+  +mq
+    width: 140px
+    height: 140px
+
+.jobFlowBox__img01
+  @extend %jobFlowBox__img
+  top: 0
+  left: -60.5px
+  +mq
+    top: 85px
+    right: -165px
+    left: auto
+
+.jobFlowBox__img02
+  @extend %jobFlowBox__img
+  top: 50%
+  left: -25px
+  transform: translateY(-50%)
+  +mq
+    top: 130px
+    right: -575px
+    left: auto
+    transform: translateY(0)
+
+.jobFlowBox__img03
+  @extend %jobFlowBox__img
+  top: 50%
+  left: -25px
+  transform: translateY(-50%)
+  +mq
+    top: -20px
+    right: -575px
+    left: auto
+    transform: translateY(0)
+
+.jobFlowBox__img04
+  @extend %jobFlowBox__img
+  top: 50%
+  left: -25px
+  transform: translateY(-50%)
+  +mq
+    top: -70px
+    right: -575px
+    left: auto
+    transform: translateY(0)
+
+.lifestyleFlow__jobFlow__foot
+
+.lifestyleFlow__jobFlow__foot__ttl
+  padding-left: 30px
+  padding-right: 30px
+  color: $primary_
+  +mq
+    padding-right: 0
+    padding-left: 0
+
+.lifestyleFlow__jobFlow__txt
+  padding: 20px 30px
+  background-color: $back
+  color: $primary_
+  line-height: 1.9
+  +mq
+    border: 1px solid $primary__
+    background-color: inherit
+    line-height: 2.2
+//jobImage
+.jobImageBox__img
+  position: relative
+  width: 100%
+  height: 43vw
+  overflow: hidden
+  > img
+    width: 100%
+    z-index: -1
+    +setCenter
+  +mq
+    width: 300px
+    height: 180px
+
+.jobImageBox__img__category
+  position: absolute
+  bottom: 0
+  left: 0
+  z-index: 1
+  width: 100%
+  padding: 10px 15px
+  color: $primary
+  background-color: rgba(0, 0, 0, 0.4)
+
+.jobImageBox__content
+  padding: 15px
+  > p
+    @include ellipsis
+    margin-top: 10px
+    margin-bottom: 0
+    color: #4e4e4e
+  .c-tag--primary--s
+    margin-right: 10px
+  +mq
+    padding: 20px
+  &__em
+    color: $secondary
+    font-size: 16px
+
+.jobImageBox__content__ttl
+  padding-bottom: 15px
+  margin-bottom: 15px
+  border-bottom: 1px solid $primary__
+//jobFlow
+.acceptJobFlow
+  padding: 0 30px
+
+.acceptJobFlow__tab
+  display: flex
+  justify-content: space-between
+  align-items: center
+  z-index: 0
+  +mq
+    max-width: 630px
+    margin-right: auto
+    margin-left: auto
+
+.acceptJobFlow__tab__child
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  width: 50%
+  margin-bottom: -5px
+  padding: 10px 0
+  border-radius: 8px 8px 0 0
+  background-color: $back
+  color: $base__
+  cursor: pointer
+  transition: all .3s
+  &:first-of-type
+    margin-right: 5px
+  +mq
+    max-width: 310px
+    height: 50px
+  span
+    width: 100%
+    font-size: 17px
+    text-align: center
+    &:first-of-type
+      font-size: 10px
+      line-height: 1
+      +mq
+        font-size: 16px
+    +mq
+      width: auto
+      font-size: 16px
+      font-weight: bold
+
+.acceptJobFlow__content__wrap
+  position: relative
+  width: 100vw
+  background-image: url("../images/about/about_bg.png")
+  background-size: 6px
+  z-index: 1
+
+.acceptJobFlow__content
+  position: relative
+  padding: 45px 30px
+  border-top: 2px solid $base
+  &:nth-of-type(n + 3)
+    &:before
+      content: ""
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      display: block
+      width: 55px
+      height: 30px
+      border-top: 15px solid $base
+      border-right: 27.5px solid transparent
+      border-left: 27.5px solid transparent
+      border-bottom: 15px solid transparent
+  &:last-of-type
+    +mq
+      padding-bottom: 100px
+
+.acceptJobFlow__content__inner
+  display: -ms-grid
+  display: grid
+  //IEでgrid-gap使えない。marginでやるしかない
+  //grid-gap: 20px;
+  grid-template-columns: 36% 64%
+  grid-template-rows: auto auto
+  -ms-grid-columns: 36% 64%
+  -ms-grid-rows: auto auto
+  +mq
+    max-width: 640px
+    margin-right: auto
+    margin-left: auto
+    grid-template-columns: 40% 60%
+    -ms-grid-columns: 40% 60%
+
+%acceptJobFlow__content__img
+  grid-row: auto
+  -ms-grid-column: 1
+  -ms-grid-row: 1
+  -ms-grid-row-span: 1
+  padding-top: 10px
+  -ms-grid-column-align: center
+  justify-self: center
+  +mq
+    grid-row: 1 / 3
+    -ms-grid-row-span: 2
+    align-self: center
+    -ms-grid-row-align: center
+
+.acceptJobFlow__content__img--icon
+  @extend %acceptJobFlow__content__img
+
+.acceptJobFlow__content__img
+  @extend %acceptJobFlow__content__img
+  position: relative
+  width: 120px
+  height: 120px
+  border-radius: 50%
+  padding: 4px
+  background-color: $primary
+  box-shadow: 0 6px 6px 0 $shadow__
+  overflow: hidden
+  z-index: 1
+  > img
+    width: 94%
+    height: 94%
+    border-radius: 50%
+    +setCenter
+  +mq
+    width: 240px
+    height: 240px
+
+.acceptJobFlow__content__img__inner
+  display: flex
+  align-items: center
+  justify-content: space-around
+  width: 150px
+  +mq
+    width: 160px
+
+.acceptJobFlow__content__img__icon
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  +mq
+    width: 60px
+    height: 60px
+  .aboutCharaBox__icon__bg01, .aboutCharaBox__icon__bg02, .aboutCharaBox__icon__bg03
+    width: 40px
+    height: 40px
+    +mq
+      width: 60px
+      height: 60px
+  .aboutCharaBox__icon__bg02
+    top: -7px
+  .aboutCharaBox__icon__bg03
+    left: 7px
+  .c-icon--map_02, .c-icon--clock, .c-icon--group
+    color: $base
+    font-size: 28px
+    z-index: 4
+    +mq
+      font-size: 34px
+
+.acceptJobFlow__content__ttl
+  -ms-grid-column: 2
+  -ms-grid-row: 1
+  align-self: center
+  -ms-grid-row-align: center
+  padding-left: 15px
+  color: $text
+  > span
+    display: block
+    color: $base
+    +mq
+      display: inline
+      margin-right: 10px
+  +mq
+    padding-left: 30px
+
+.acceptJobFlow__content__txt
+  grid-column: 1 / 3
+  -ms-grid-column: 1
+  -ms-grid-column-span: 2
+  -ms-grid-row: 2
+  margin-top: 20px
+  line-height: 1.8
+  +mq
+    grid-column: auto
+    -ms-grid-column: 2
+    -ms-grid-column-span: 1
+    padding-left: 30px
+
+.about-caution
+  color: $text__
+  +mq
+    padding-right: 15px
+    width: 30%
+  &__wrap
+    +mq
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+// 新電力切り替えキャンペーン
+.pps
+  background-color: $back
+  &__container
+    background-color: $primary
+    +mq
+      width: 1000px
+      margin-top: 50px
+      margin-left: auto
+      margin-right: auto
+      box-shadow: 0 0 10px 0 rgba(#000, 0.3)
+      padding-bottom: 40px
+  &__main
+    background-image: url("../images/campaign/pps-1803/bg_main_sp.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    padding: 25px 15px 20px
+    +mq
+      background-image: url("../images/campaign/pps-1803/bg_main_pc.jpg")
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 50px 0
+    &__heading
+      margin: 0
+      &__img
+        width: 100%
+        +mq
+          width: 695px
+  &__reward
+    &__container
+      padding: 40px 15px 0
+    &__heading
+      &--primary
+        font-weight: bold
+        font-size: 22px
+        text-align: center
+        color: $base
+        margin: 0
+        +mq
+          font-size: 24px
+    &__step
+      display: flex
+      max-width: 330px
+      margin: 0 auto
+      +mq
+        max-width: 100%
+        flex-direction: column
+        margin-top: 1.5rem + 3rem
+      @media (max-width: 385px)
+        margin: 0 0 0 1.6rem
+      &__border
+        background-color: #ccc
+        width: 2px
+        margin-right: -1.6rem
+        margin-top: 2rem
+        margin-bottom: 2rem
+        +mq
+          height: 2px
+          width: auto
+          margin-right: 90px
+          margin-left: 95px
+          margin-top: 0
+          margin-bottom: -1.5rem
+      &__box
+        display: flex
+        margin-top: 35px
+        margin-bottom: 0
+        +mq
+          flex-direction: column
+          align-items: center
+          margin-top: 0
+          width: 150px
+          flex: 0 0 150px
+        &:first-of-type
+          margin-top: 20px
+          +mq
+            margin-top: 0
+            margin-left: 0
+        &:last-of-type
+          margin-top: 20px
+          +mq
+            margin-top: 0
+        &__wrap
+          +mq
+            display: flex
+            width: 930px
+            justify-content: space-between
+            margin: 0 auto
+      &__ttl
+        width: 30px
+        height: 30px
+        border: solid 3px $base
+        color: $base
+        font-size: 14px
+        border-radius: (30px / 2)
+        display: flex
+        justify-content: center
+        align-items: center
+        flex: 0 0 auto
+        background-color: $primary
+      &__data
+        font-size: 16px
+        color: $text
+        margin-left: 10px
+        +mq
+          margin-left: 0
+          margin-top: 20px
+        &__body
+          +mq
+            width: 150px
+        &__note
+          font-size: 12px
+          color: $secondary
+          +mq
+            width: 150px
+  &__area
+    background-color: $back
+    border-top: solid 1px $primary__
+    border-bottom: solid 1px $primary__
+    padding: 40px 0
+    margin-top: 40px
+    +mq
+      width: 920px
+      margin: 60px auto 0
+      padding: 50px 0
+      border-radius: 6px
+      border: solid 1px $primary__
+    &__heading
+      font-size: 16px
+      text-align: center
+      font-weight: bold
+      line-height: 1.6
+      margin: 0
+      +mq
+        font-size: 24px
+    &__box
+      padding: 0 20px
+      display: flex
+      flex-wrap: wrap
+      max-width: 375px
+      margin: 20px auto 0
+      justify-content: space-between
+      +mq
+        max-width: 100%
+        margin: 40px auto 0
+        padding: 0 30px
+      &__item
+        list-style: none
+        display: flex
+        +mq
+          width: 194px
+        &:nth-child(odd)
+          justify-content: flex-end
+          +mq
+            margin-right: 0
+        &:nth-child(even)
+          justify-content: flex-start
+          +mq
+            margin-left: 0
+        &:nth-child(n+3)
+          margin-top: 25px
+          +mq
+            margin-top: 0
+        &:nth-child(n+5)
+          +mq
+            margin-top: 30px
+      &__body
+        width: 155px
+        height: 50px
+        border-radius: 2px
+        background-color: $base
+        box-shadow: 0 3px 6px 0 rgba(#000, 0.2)
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $primary__
+        font-size: 15px
+        +mq
+          width: 194px
+          height: 80px
+          font-size: 18px
+          +hover
+        @media (max-width: 320px)
+          width: 130px
+  &__btn
+    &--primary
+      width: 290px
+      height: 50px
+      border-radius: (50px / 2)
+      background-color: $accent
+      box-shadow: 0 3px 6px 0 rgba(#000, 0.2)
+      color: $primary
+      font-size: 21px
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 auto
+      font-weight: bold
+      margin-top: 30px
+      +hover
+      +mq
+        width: 340px
+        height: 80px
+        border-radius: 40px
+        box-shadow: 0 1px 6px 0 rgba(#000, 0.2)
+        font-size: 24px
+        margin-top: 50px
+  &__footer
+    height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+    +mq
+      height: auto
+      margin-top: 20px
+    &__copy
+      font-size: 10px
+      color: $text__
+
+// client lp
+.clt-lp
+  display: block
+  &__sendMailError
+    display: none
+  &__header
+    box-shadow: none
+    position: absolute
+    top: 0
+    display: flex
+    align-items: center
+    padding-left: 30px
+    &__img
+      width: 120px
+      vertical-align: top
+  &__footer
+    margin-top: 50px
+    +mq
+      margin-top: 80px
+  &__main
+    background-image: url("/images/campaign/clt_lp/bg_main_sp.jpg")
+    background-size: cover
+    background-position: 50% 50%
+    +mq
+      background-image: url("/images/campaign/clt_lp/bg_main_pc.jpg")
+      padding: 0
+    &__heading
+      font-weight: bold
+      font-size: 2.4rem
+      line-height: 1.71
+      color: #fff
+      margin: 0
+      text-align: center
+      text-shadow: 0 0 20px rgba(#000, .4)
+      +mq
+        font-size: 4.6rem
+        text-align: left
+      &__em
+        color: $base
+        +mq
+          font-size: 3.6rem
+    &__img
+      width: 100%
+      margin: 45px 0 -85px
+      +mq
+        margin: 100px 0 -80px
+        max-width: 660px
+      @media(min-width: 1315px)
+        margin: 50px 0 -77px -40px
+    &__content
+      padding: 80px 15px 0
+      +mq
+        background-color: rgba(#053136, .6)
+        width: 55vw
+        padding: 120px 20px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: left
+        @media(min-width: 1315px)
+          padding: 120px 0 0
+      &__inner
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media(min-width: 1315px)
+          align-self: flex-end
+          padding-right: 40px
+    &__overview
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20id%3D%22shasen%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.88%202.88%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%23F7F7F7%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22group%22%3E%3Cpath%20id%3D%22line%22%20class%3D%22cls-1%22%20d%3D%22M0%200v.71L.71%200H0z%22%2F%3E%3Cpath%20id%3D%22line-2%22%20data-name%3D%22line%22%20class%3D%22cls-1%22%20d%3D%22M0%202.88h.71L2.88.71V0L0%202.88z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+      background-size: 6px 6px
+      padding: 0 15px 40px
+      +mq
+        padding: 0 15px 80px
+      &__body
+        font-size: 1.8rem
+        line-height: 1.5
+        color: $text
+        font-weight: bold
+        text-align: center
+        padding-top: 110px
+        +mq
+          font-size: 2.4rem
+    .clt-lp__btn--primary
+      margin-top: 30px
+      +mq
+        margin-top: 40px
+        +hover
+      @media (min-width: 850px)
+        width: 450px
+        height: 70px
+        border-radius: 35px
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2)
+        font-size: 2.2rem
+
+  &__btn
+    &--primary
+      width: 300px
+      height: 60px
+      border-radius: 30px
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3)
+      background-image: linear-gradient(to right, #ffc400, #e0802e)
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $primary
+      font-size: 2rem
+      font-weight: bold
+      +mq
+        width: 340px
+        height: 60px
+        font-size: 2.2rem
+        +hover
+    &--secondary
+      width: 240px
+      height: 50px
+      border-radius: 30px
+      background-color: $secondary
+      display: flex
+      justify-content: center
+      align-items: center
+      color: $primary
+      font-weight: bold
+      font-size: 2rem
+      box-shadow: none
+      border: none
+      transition: all .2s ease-out
+      +hover
+      &.is-disabled
+        background-color: $back_
+        opacity: 1 !important
+  &__heading
+    font-size: 2.6rem
+    font-weight: bold
+    line-height: 1
+    color: $text
+    text-align: center
+    margin: 0
+    +mq
+      font-size: 4rem
+    &:before
+      content: ''
+      display: block
+      width: 60px
+      height: 4px
+      background-image: linear-gradient(to right, #60d1de, #13b5c7)
+      margin: 0 auto 15px
+      +mq
+        width: 100px
+        height: 4px
+  &__overview
+    font-weight: bold
+    font-size: 1.8rem
+    line-height: 1.5
+    margin-top: 20px
+    text-align: center
+    color: $text
+    +mq
+      font-size: 2.4rem
+      margin-top: 30px
+  &__work
+    background-color: #f5f5f5
+    padding: 40px 20px
+    position: relative
+    z-index: 1
+    +mq
+      padding: 80px 20px
+    &__body
+      font-size: 1.6rem
+      color: $text
+      line-height: 1.7
+      margin-top: 20px
+      +mq
+        font-size: 1.8rem
+        margin-top: 30px
+        text-align: center
+    &__sample
+      background-color: #fff
+      position: relative
+      margin-top: 25px
+      padding-bottom: 20px
+      +mq
+        display: flex
+        flex-wrap: wrap
+        max-width: 800px
+        margin: 40px auto 0
+        padding-bottom: 0
+      &:after
+        position: absolute
+        top: 10px
+        left: 10px
+        content: ""
+        height: 100%
+        width: 100%
+        z-index: -1
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20id%3D%22shasen%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%202.88%202.88%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%23bfbfbf%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22group%22%3E%3Cpath%20id%3D%22line%22%20class%3D%22cls-1%22%20d%3D%22M0%200v.71L.71%200H0z%22%2F%3E%3Cpath%20id%3D%22line-2%22%20data-name%3D%22line%22%20class%3D%22cls-1%22%20d%3D%22M0%202.88h.71L2.88.71V0L0%202.88z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")
+        background-size: 6px 6px
+      &__box
+        margin: 0
+        padding-top: 25px
+        +mq
+          width: 50%
+          display: flex
+          flex-direction: column
+          &:nth-child(1)
+            border-right: 1px solid $back
+            border-bottom: 1px solid $back
+          &:nth-child(2)
+            border-bottom: 1px solid $back
+          &:nth-child(3)
+            border-right: 1px solid $back
+          &:nth-child(4)
+            border-right: 1px solid $back
+        &:nth-child(n+2)
+          border-top: 1px solid $back
+          margin-top: 25px
+          +mq
+            border-top: none
+            margin-top: 0
+      &__ttl
+        display: flex
+        align-items: center
+        font-weight: bold
+        color: $text
+        padding: 0 15px
+        +mq
+          flex-direction: column
+          padding: 0
+          font-size: 1.6rem
+          height: 100%
+          justify-content: flex-end
+        &__body
+          font-size: 1.6rem
+          +mq
+            display: block
+            margin-top: 15px
+      &__data
+        padding: 0 15px
+        +mq
+          padding: 0 0 30px
+          display: flex
+          justify-content: center
+        &__inner
+          +mq
+            display: inline-flex
+            flex-direction: column
+            margin-left: -1rem
+      &__icon
+        &--door
+          width: 21.9px
+          height: 30px
+          margin-right: 15px
+          +mq
+            width: 36.5px
+            height: 50px
+            margin-right: 0
+        &--camera
+          width: 30px
+          height: 24.4px
+          margin-right: 15px
+          +mq
+            width: 49.2px
+            height: 40px
+            margin-right: 0
+        &--talk
+          width: 30px
+          height: 28.3px
+          margin-right: 15px
+          +mq
+            width: 53.1px
+            height: 50px
+            margin-right: 0
+        &--briefcase
+          width: 30px
+          height: 25.1px
+          margin-right: 15px
+          +mq
+            width: 47.8px
+            height: 40px
+            margin-right: 0
+      &__order
+        display: flex
+        margin-top: 10px
+        margin-bottom: 0
+        &:nth-child(2)
+          margin-top: 5px
+          +mq
+            margin-top: 10px
+        +mq
+          margin: 15px 0 0
+        &__ttl
+          font-size: 1.3rem
+          flex: 0 0 7rem
+          color: $primary_
+          background-color: #f5f5f5
+          display: flex
+          align-items: center
+          justify-content: center
+          font-weight: bold
+          border-radius: 2px
+          min-height: 24px
+        &__data
+          margin-left: 10px
+          font-size: 1.4rem
+          color: $text
+          +mq
+            flex-shrink: 0
+    .clt-lp__btn--primary
+      margin: 0 auto
+      margin-top: 20px
+      +mq
+        margin-top: 40px
+  &__flow
+    padding-top: 40px
+    padding-bottom: 40px
+    background-image: url("../images/campaign/clt_lp/bg_flow.jpg")
+    background-size: cover
+    background-position: 50% 50%
+    +mq
+      padding-top: 80px
+      padding-bottom: 80px
+    .clt-lp__heading
+      color: #fff
+      line-height: 1.5
+      +mq
+        line-height: 1
+    .clt-lp__btn--primary
+      margin: 30px auto 0
+      +mq
+        margin: 40px auto 0
+    &__content
+      padding: 0 20px
+      margin-top: 20px
+      +mq
+        margin: 50px auto 0
+        max-width: 700px
+        padding: 0
+    &__box
+      background-color: #fff
+      border-radius: 6px
+      padding: 15px 10px
+      margin: 0
+      position: relative
+      +mq
+        padding: 30px 35px
+      &:nth-child(n+2)
+        margin-top: 30px
+        +mq
+          margin-top: 50px
+      &:not(:last-child)
+        &:before
+          content: ''
+          display: block
+          position: absolute
+          height: 15px
+          width: 2px
+          background-color: #999
+          left: 50%
+          bottom: -15px
+          margin-left: -1px
+          +mq
+            bottom: -35px
+            height: 35px
+        &:after
+          content: ""
+          display: block
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 15px 5px 0 5px
+          border-color: #999 transparent transparent transparent
+          position: absolute
+          bottom: -30px
+          left: 50%
+          margin-left: -5px
+          +mq
+            bottom: -50px
+    &__ttl
+      font-size: 1.6rem
+      line-height: 1
+      color: $text
+      font-weight: bold
+      text-align: center
+      +mq
+        font-size: 2rem
+    &__data
+      font-size: 1.4rem
+      color: $text
+      line-height: 1.7
+      margin-top: 15px
+      +mq
+        font-size: 1.6rem
+        text-align: center
+  &__results
+    &__data
+      +mq
+        display: flex
+        height: 100%
+        flex-direction: column
+        padding-bottom: 60px
+    &__head
+      padding: 40px 20px 30px
+      background-color: #f5f5f5
+      +mq
+        padding: 80px 20px 40px
+    &__main
+      +mq
+        display: flex
+        min-width: 1080px
+    &__content
+      margin: 0
+      +mq
+        flex: 1
+        display: flex
+        flex-direction: column
+      &:nth-child(n+2)
+        margin-top: 30px
+        +mq
+          margin-top: 0
+          border-left: 1px solid $back
+    &__person
+      &--1
+        width: 100%
+        height: 150px
+        background-image: url("../images/campaign/clt_lp/bg_result_1.jpg")
+        background-size: cover
+        background-position: 50% 50%
+        +mq
+          height: 250px
+      &--2
+        @extend .clt-lp__results__person--1
+        background-image: url("../images/campaign/clt_lp/bg_result_2.jpg")
+      &--3
+        @extend .clt-lp__results__person--1
+        background-image: url("../images/campaign/clt_lp/bg_result_3.jpg")
+    &__name
+      font-size: 2.4rem
+      font-weight: bold
+      color: $base
+      margin-top: 20px
+      text-align: center
+    &__detail
+      margin: 20px 0 0
+      padding: 0 20px
+      display: flex
+      &:nth-child(n+2)
+        margin-top: 10px
+      &__ttl
+        @extend .clt-lp__work__sample__order__ttl
+        flex: 0 0 10rem
+      &__data
+        @extend .clt-lp__work__sample__order__data
+    &__about
+      border-radius: 3px
+      border: solid 1px $line
+      padding: 15px
+      margin: 15px 20px 0
+      height: 100%
+      &__ttl
+        font-size: 1.3rem
+        font-weight: bold
+        color: $text
+        line-height: 1
+      &__data
+        font-size: 1.4rem
+        color: $text
+        line-height: 1.5
+        margin-top: 10px
+  &__price
+    background-image: url("../images/campaign/clt_lp/bg_price.jpg")
+    background-position: 50% 50%
+    background-size: cover
+    margin-top: 40px
+    padding: 40px 20px
+    +mq
+      padding: 80px 20px
+      margin-top: 0
+    .clt-lp__heading
+      color: #fff
+    &__overview
+      background-color: #fff
+      border-radius: 6px
+      box-shadow: 0 0 12px 0 rgba(#000, .16)
+      padding: 20px
+      margin-top: 30px
+      +mq
+        padding: 30px
+        max-width: 560px
+        margin: 30px auto 0
+      &__body
+        &--primary
+          font-size: 1.6rem
+          color: $text
+          line-height: 1.7
+          +mq
+            text-align: center
+          &__em
+            color: $accent
+            font-weight: bold
+        &--secondary
+          margin-top: 15px
+          text-align: center
+          &__ttl
+            height: 34px
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            padding: 0 15px
+            border-radius: 3px
+            background-color: $base
+            color: #fff
+            position: relative
+            font-size: 2rem
+            font-weight: bold
+            &:after
+              content: ""
+              width: 0
+              height: 0
+              border-style: solid
+              border-width: 10px 10px 0 10px
+              border-color: #60d1de transparent transparent transparent
+              position: absolute
+              bottom: -10px
+              left: 50%
+              margin-left: -10px
+          &__data
+            font-size: 4.6rem
+            font-weight: bold
+            color: $secondary
+            line-height: 1
+            margin-top: 20px
+            display: block
+    &__note
+      margin-top: 15px
+      font-size: 1.4rem
+      color: #fff
+      line-height: 1.7
+      +mq
+        max-width: 560px
+        margin: 20px auto 0
+        white-space: nowrap
+        &:nth-of-type(n+2)
+          margin-top: 10px
+  &__counseling
+    padding: 40px 20px 0
+    +mq
+      padding: 80px 20px 0
+    &__overview
+      font-size: 1.6rem
+      color: $text
+      line-height: 1.7
+      margin-top: 20px
+      +mq
+        font-size: 1.6rem
+        margin-top: 40px
+        text-align: center
+    &__form
+      margin-top: 30px
+      +mq
+        width: 700px
+        margin: 50px auto 0
+      &__error
+        display: none
+        font-size: 1.2rem
+        color: $secondary
+        margin-top: 10px
+        &--server
+          @extend .clt-lp__counseling__form__error
+          display: block
+      &__box
+        &:nth-child(n+2)
+          border-top: 1px dashed $line
+          padding-top: 20px
+          margin-top: 20px
+        +mq
+          display: flex
+      &__ttl
+        display: flex
+        align-items: center
+        +mq
+          flex: 0 0 20rem
+        &.is-textarea
+          +mq
+            align-items: flex-start
+            padding-top: 10px
+        &__body
+          font-weight: bold
+          font-size: 1.6rem
+          color: $text
+          +mq
+            font-size: 1.8rem
+        &__required
+          height: 22px
+          padding: 0 4px
+          border-radius: 3px
+          border: solid 1px $secondary
+          color: $secondary
+          font-size: 1.2rem
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-left: 15px
+      &__data
+        +mq
+          width: 100%
+        &__body
+          //materializeを上書き
+          height: 45px !important
+          border-radius: 6px !important
+          border: solid 1px $line !important
+          background-color: #f5f5f5 !important
+          font-size: 1.6rem !important
+          box-shadow: none !important
+          transition: none !important
+          padding: 15px 20px !important
+          margin-top: 15px
+          +placeholderColor(#b9b9b9, 1.6rem)
+          +mq
+            margin-top: 0
+            font-size: 1.8rem
+          &.is-error
+            background-color: #fff1f1!important
+            border: 1px solid $secondary!important
+          &.is-valid
+            background-color: #f4fcfd!important
+            border: 1px solid $base!important
+          &--textarea
+            outline: none
+            min-height: 200px
+            line-height: 1.7
+            border-radius: 6px
+            border: solid 1px $line
+            background-color: #f5f5f5
+            font-size: 1.6rem
+            box-shadow: none
+            transition: none
+            padding: 15px 20px
+            overflow: hidden
+            margin-top: 15px
+            &.is-error
+              background-color: #fff1f1!important
+              border: 1px solid $secondary!important
+            &.is-valid
+              background-color: #f4fcfd!important
+              border: 1px solid $base!important
+      &__note
+        margin-top: 20px
+        padding-top: 30px
+        border-top: 1px dashed $line
+        &__body
+          font-size: 1.6rem
+          line-height: 1.7
+          color: $text
+          +mq
+            text-align: center
+          &__anchor
+            color: $base
+            text-decoration: underline !important
+    .clt-lp__btn--secondary
+      margin: 30px auto 0
+  &__complete
+    padding: 90px 0 50px
+    +mq
+      padding: 180px 0 120px
+    &__heading
+      font-size: 2rem
+      font-weight: bold
+      text-align: center
+      color: $text
+      margin: 0
+      line-height: 1
+      +mq
+        font-size: 2.4rem
+    &__body
+      color: $text
+      font-size: 1.6rem
+      padding: 0 20px
+      line-height: 1.7
+      margin-top: 20px
+      +mq
+        text-align: center
+        margin-top: 45px
+      &:nth-of-type(n+2)
+        margin-top: 2rem

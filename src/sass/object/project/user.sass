@@ -1,0 +1,152 @@
+.flowBox
+  display: flex
+  justify-content: center
+  margin-right: auto
+  margin-left: auto
+
+.flowBox__child
+  width: 45px
+  position: relative
+  +mq
+    width: 60px
+  &.is-active
+    width: 45px
+    +mq
+      width: 60px
+    .flowBox__child__circle
+      background-color: $base
+      color: $primary
+    .flowBox__child__txt
+      color: $base
+      font-size: 1.1rem
+      +mq
+        font-size: 1.4rem
+  &:nth-child(n+2)
+    margin-left: 55px
+    +mq
+      margin-left: 70px
+  &:last-child
+    .flowBox__child__circle
+      &:before
+        display: none
+  &--secondary
+    @extend .flowBox__child
+    width: 60px
+    &.is-active
+      width: 60px
+    &:nth-child(n+2)
+      margin-left: 40px
+      +mq
+        margin-left: 80px
+
+.flowBox__child__circle
+  position: relative
+  width: 45px
+  height: 45px
+  margin-right: auto
+  margin-left: auto
+  border-radius: 50%
+  box-shadow: 0 6px 12px 0 $shadow__
+  color: $text__
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  line-height: 1.2
+  +mq
+    width: 60px
+    height: 60px
+    flex-direction: row
+  &__body
+    display: block
+    font-size: 1.3rem
+    +mq
+      font-size: 1.2rem
+    &__em
+      font-size: 1.5rem
+      +mq
+        font-size: 1.6rem
+        margin-left: 2px
+  &:before
+    content: ''
+    width: 15px
+    height: 2px
+    background-color: $line
+    position: absolute
+    top: 50%
+    right: -23px
+    margin-top: -1px
+    +mq
+      width: 40px
+      height: 4px
+      right: -54px
+  &--secondary
+    @extend .flowBox__child__circle
+    width: 60px
+    height: 60px
+    &:before
+      width: 20px
+      right: -30px
+      +mq
+        width: 40px
+        right: -60px
+
+.flowBox__child__txt
+  width: 100px
+  text-align: center
+  font-weight: bold
+  color: $text__
+  font-size: 1.1rem
+  margin-left: -27px
+  margin-top: 25px
+  +mq
+    width: 130px
+    font-size: 1.4rem
+    margin-left: -35px
+  &--secondary
+    @extend .flowBox__child__txt
+    width: 60px
+    margin-left: 0
+    margin-top: 20px
+
+.thanks-txt
+  max-width: 320px
+  overflow-wrap: break-word
+  margin-right: auto
+  margin-left: auto
+  text-align: left
+  color: $primary_
+  +mq
+    max-width: 560px
+    width: 560px
+    text-align: center
+
+.flowBox--vertical__child
+  position: relative
+
+.flowBox--vertical__child__ttl
+  color: $base
+  line-height: 1
+
+.flowBox--vertical__child__content
+  padding: 30px
+  background-color: $back
+  color: $text
+  +mq
+    padding: 30px 40px
+  .noticeTxt
+    display: inline-block
+    color: $primary_
+
+.flowBox--vertical__child__arrow
+  position: absolute
+  left: 50%
+  bottom: -40px
+  transform: translateX(-50%)
+  width: 25px
+  height: 25px
+  border-top: 12.5px solid $base
+  border-right: 12.5px solid transparent
+  border-bottom: 12.5px solid transparent
+  border-left: 12.5px solid transparent

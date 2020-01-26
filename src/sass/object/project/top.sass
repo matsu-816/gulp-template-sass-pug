@@ -1,0 +1,261 @@
+.topContent
+  .l-sidebar
+    display: none
+    +mq
+      display: block
+.top-about-img
+  +mq
+    max-width: 670px
+    margin-right: auto
+    margin-left: auto
+  > img
+    width: 100%
+
+.topLineImg
+  padding: 0 20px
+  +mq
+    max-width: 830px
+    margin-right: auto
+    margin-left: auto
+  > img
+    width: 100%
+
+
+.topLineImg--secondary
+  padding: 0 20px
+  +mq
+    max-width: 700px
+    margin-right: auto
+    margin-left: auto
+    padding: 0
+  > img
+    width: 100%
+
+.topLineImg--tertiary
+  +mq
+    max-width: 700px
+    margin-right: auto
+    margin-left: auto
+    padding: 0
+  > img
+    width: 100%
+
+.topLineBtn
+  width: 161.1px
+  margin: auto
+  padding-top: 15px
+
+.topProductsCount
+  +mq
+    font-size: 48px
+  &__body
+    font-size: 22px
+    text-align: center
+    font-weight: bold
+    color: #60d1de
+    +mq
+      font-size: 28px
+  &__sup
+    font-size: 14px
+    text-align: center
+
+.topReason
+  background-image: url("../images/top/bg_support.png")
+  background-repeat: repeat-x
+  background-size: cover
+  background-position: center center
+  margin-top: 0
+  .c-title--center, .title-subTxt
+    color: $primary
+  +mq
+    margin-top: 100px
+  &__inner
+    padding: 50px 0 60px
+    +mq
+      padding: 100px 0 120px
+  &--secondary
+    @extend .topReason
+    background-image: none
+    .topReason__inner
+      padding-top: 45px
+      +mq
+        padding-top: 100px
+    .slick-slide
+      +mq
+        padding-bottom: 0
+    +mq
+      margin-top: 0
+      .slider--secondary__child__inner
+        box-shadow: none
+        padding: 0
+      .slider--secondary__child
+        margin-right: 40px
+        margin-left: 40px
+    .c-title--center, .title-subTxt
+      color: $base___
+
+.recommend
+  padding: 0 20px
+  +mq
+    max-width: 902px
+    height: 398px
+    position: relative
+    margin: 0 auto
+    padding: 0 10px
+    > img
+      height: 380px
+      position: absolute
+      top: 18px
+      right: 0
+
+.recommendBox
+  background-color: #ffffff
+  opacity: .9
+  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.15)
+  padding: 20px
+  max-width: 480px
+  +mq
+    height: 380px
+    padding: 50px 112px 50px 50px
+    z-index: 1
+    position: absolute
+    left: 0
+
+.recommendBox__ttl
+  color: $base
+  font-size: 21px
+  text-align: center
+  +mq
+    font-size: 22px
+
+.recommendBox__item
+  font-size: 14px
+  margin-top: 1rem
+  +mq
+    font-size: 16px
+  &__body
+    &:nth-child(n+2)
+      margin-top: 1rem
+
+.columnBox-2__child--workers
+  width: calc(94% / 2)
+  &:nth-child(-n+2)
+    margin-top: 10px
+    margin-bottom: 30px
+  +mq
+    width: 220px
+
+.workers-img
+  width: 70px
+  height: 70px
+  border-radius: 50%
+  display: block
+  margin: auto
+  +mq
+    width: 80px
+    height: 80px
+
+.workers-profile
+  font-size: 11px
+
+.workers-desc
+  font-size: 13px
+
+.workers-remark
+  color: $disable
+  text-align: center
+  +mq
+    max-width: 1080px
+    margin: auto
+    text-align: right
+
+%clientLogo
+  position: relative
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  //padding: 2px;
+  border: 1px solid $line
+  border-radius: 50%
+  overflow: hidden
+  z-index: 1
+  > img
+    height: 100%
+    +setCenter
+
+.clientLogo--s
+  @extend %clientLogo
+  width: 40px
+  height: 40px
+  flex: 0 0 40px
+  margin-right: 12.5px
+
+.clientLogo--l
+  @extend %clientLogo
+  width: 80px
+  height: 80px
+
+.topBlog--secondary
+  .c-title--center--contents
+    color: $base___
+  .c-tag--blogCategory-01
+    color: $base___
+    border: 1px solid $base___
+
+.topFaq--secondary
+  .c-title--center,
+  .qaBox-question
+    color: $base___
+.contentsBox--coworking
+  background: url("/images/top/bg_coworking_sp.jpg") no-repeat top (center / cover)
+  margin-bottom: 10px
+  padding: 65px 0
+  +mq
+    @include widthPC
+    margin-top: 100px
+    margin-bottom: 0
+    background-image: url("/images/top/bg_coworking_pc.jpg")
+
+.coworkingBox
+  width: calc(100% - (25px * 2))
+  max-width: 600px
+  margin: 0 auto
+  padding: 40px 20px
+  background-color: rgba(255, 255, 255, 0.95)
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4)
+  color: $text
+  text-align: center
+  +mq
+    padding: 40px
+  &--secondary
+    @extend .coworkingBox
+    .coworkingBox__subTtl
+      color: $base_
+
+.coworkingBox__ttl
+  width: 100%
+  max-width: 430px
+  height: auto
+  margin: 0 auto
+  & > img
+    width: 100%
+    height: auto
+
+.coworkingBox__subTtl
+  margin: 25px 0 0
+  color: $base_
+  font-size: 18px
+  font-weight: bold
+  text-align: left
+  +mq
+    text-align: center
+
+.coworkingBox__link
+  text-align: center
+  & > a
+    color: $text
+    text-decoration: underline
+  .c-icon--arrow_05
+    display: inline-block
+    transform: rotate(180deg)
+    margin-left: 5px

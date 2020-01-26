@@ -1,0 +1,198 @@
+.searchBox--top
+	padding: 10px
+	background-color: $back__
+	border-radius: 6px
+	+mq
+		display: flex
+		align-items: center
+		max-width: 740px
+		margin-right: auto
+		margin-left: auto
+	&--secondary
+		@extend .searchBox--top
+		.c-icon-wrap--selectArrow--m--top .select-wrapper input.select-dropdown:hover,
+		.select-dropdown.dropdown-content li.active
+			color: $base___
+
+.searchBox--top__inner
+	+mq
+		display: flex
+		align-items: center
+		width: 100%
+		border-radius: 6px
+		box-shadow: 0 0 6px 0 $shadow__
+		+mq
+			border-radius: 4px
+
+.searchBox--top__formArea
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	border-radius: 6px
+	box-shadow: 0 0 6px 0 $shadow__
+	//materializeのselectがboxをはみ出すので
+	//overflow: hidden;
+	+mq
+		width: 600px
+		border-radius: 4px 0 0 4px
+		box-shadow: none
+	> div
+		&:nth-of-type(1)
+			.select-dropdown
+				border-radius: 6px
+				+mq
+					border-radius: 4px 0 0 4px
+		&:nth-of-type(2)
+			.select-dropdown
+				border-radius: 0 6px 6px 0
+				+mq
+					border-radius: 0
+		&:nth-of-type(3)
+			.datepicker
+				border-radius: 0 0 0 6px
+				+mq
+					border-radius: 0
+		&:nth-of-type(4)
+			.datepicker
+				border-radius: 0 0 6px 0
+				+mq
+					border-radius: 0
+
+.searchBox--archive
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.searchBox__wide
+	width: 100%
+	box-shadow: 0 6px 12px 0 $shadow__
+
+.searchBox__half
+	display: flex
+	flex-wrap: wrap
+	width: 49%
+	box-shadow: 0 6px 12px 0 $shadow__
+
+.searchBox__ttl
+	width: 100%
+	height: 40px
+	padding: 13px 20px
+	background-color: $back
+	color: $text
+	line-height: 1
+
+.searchBox__content
+	width: 100%
+	padding: 25px 20px
+
+.searchBox__content__head
+	display: flex
+	align-items: center
+
+.searchBox__content__cityToggle
+	display: flex
+	align-items: center
+	margin-left: 30px
+	color: $text__
+	> .c-icon--plus_04
+		color: $text__
+		font-size: 10px
+		margin-left: 10px
+		transition: all .3s
+
+.searchBox__content__cityList
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	width: 100%
+	> li
+		width: 130px
+		padding-right: 10px
+		font-size: 12px
+		margin-top: 15px
+		line-height: 1
+	> li.searchBox__content__cityList__area
+		width: 100%
+		margin-top: 30px
+		font-size: 14px
+		font-weight: bold
+
+.searchBox__content__foot
+	display: none
+
+.searchBox__content__date
+	display: flex
+	justify-content: space-between
+	.c-icon--arrow_04
+		font-size: 18px
+		color: $text__
+		line-height: 50px
+
+.searchBox__content__date__first,
+.searchBox__content__date__last
+	display: flex
+	align-items: center
+	.c-icon--calendar
+		font-size: 16px
+		margin-right: 12px
+		color: $primary_
+
+.searchBox--mypage
+	@extend .searchBox--top__formArea
+	+mq
+		margin-left: 30px
+	&__wrap
+		display: none
+	&__icon
+		transform: translateX(20px)
+	&__icon:before
+		display: none
+		+mq
+			display: block
+			font-size: 2.2rem
+			color: $text__
+	.c-icon-wrap--selectArrow--date
+		+mq
+			display: flex
+			border-bottom: 1px solid $line
+			height: 51px
+			width: 180px
+			align-items: center
+		&:before
+			display: none
+			+mq
+				display: block
+				font-size: 1.8rem
+				color: $primary_
+				transform: translateX(-26px)
+		&:last-of-type
+			border-right: none
+			+mq
+				margin-left: 66px
+		&:after
+			+mq
+				content: "\EA02"
+				font-family: "icon"
+				font-style: normal
+				font-weight: normal
+				font-variant: normal
+				text-transform: none
+				-webkit-font-smoothing: antialiased
+				text-decoration: none
+				vertical-align: top
+				display: inline-block
+				width: auto
+				height: auto
+				right: 0
+				background-color: transparent
+				transform: translateY(0)
+				position: absolute
+				top: 50%
+				margin-top: -8px
+				font-size: 1.6rem
+				color: $text__
+				line-height: 1
+		.datepicker
+			+mq
+				position: relative
+				padding: 0 !important

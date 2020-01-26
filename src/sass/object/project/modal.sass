@@ -1,0 +1,304 @@
+.c-list--job--modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  z-index: -9999
+  transition: all .3s
+
+.c-list--job--modal__inner
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  max-height: 100vh
+  padding: 30px
+  overflow-y: scroll
+  +mq
+    padding-right: 0
+    padding-left: 0
+
+.c-list--job--modal__ttl
+  color: $base
+  text-align: center
+  &--alert
+    @extend .c-list--job--modal__ttl
+    color: $secondary
+    &.c-icon--alert:before
+      font-size: 27px
+      display: block
+      padding-bottom: 20px
+      line-height: 1
+  &--secondary
+    @extend .c-list--job--modal__ttl
+    color: $text
+
+.c-list--job--modal__txt
+  text-align: center
+
+.c-list--job--modal__txt--secondary
+  text-align: left
+  @include mq
+    text-align: center
+    line-height: 2
+
+.c-list--job--modal__btnBox
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  +mq
+    // max-width: 520px
+    max-width: 620px
+    margin-right: auto
+    margin-left: auto
+    .c-button-square--full--primary
+      margin-right: 20px
+      // width: 250px
+      width: 300px
+      &:nth-child(n + 2)
+        margin-right: 0
+  &__inner
+    +mq
+      display: flex
+
+.c-list--job--modal__entryMessage
+  display: none
+  > img
+    max-width: 100%
+    margin-right: auto
+    margin-left: auto
+    +mq
+      max-width: 700px
+
+.c-list--job--modal__login
+  .btnBox
+    justify-content: center
+    
+// sidebar
+// ----------------------- //
+.sidebar-modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  opacity: 0
+  z-index: -9999
+  transition: all .3s
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  &[data-target-side-modal].is-open
+    opacity: 1
+    transition: all .3s
+    background-color: rgba(#000, 0.8)
+    z-index: 9999
+  &__inner
+    background-color: #fff
+    width: 90vw
+    height: 90vh
+    border-radius: 3px
+    margin-bottom: 120px
+    margin-top: 30px
+    overflow: hidden
+    .columnBox-2--noSidePadding
+      padding: 20px 0 20px 2.8rem
+    +mq
+      margin: 0
+      width: 900px
+      height: 700px
+    &--other
+      .columnBox-1--secondary
+        padding-left: 1rem
+  &__btn
+    position: fixed
+    bottom: 0
+    width: 100%
+    height: 90px
+    box-shadow: 0 -6px 6px 0 rgba(0, 0, 0, 0.16)
+    background-color: $back
+    display: flex
+    align-items: center
+    padding: 0 20px
+  &__content
+    padding: 30px 15px 80px
+    width: 100%
+    height: 100%
+    overflow: auto
+    position: relative
+    +mq
+      padding: 30px 40px
+  &__container
+    +mq
+      display: flex
+      flex-wrap: wrap
+  &__title
+    font-size: 16px
+    border-bottom: 2px solid $primary__
+    padding-bottom: 8px
+    font-weight: bold
+    color: $primary_
+    +mq
+      font-size: 14px
+      padding-bottom: 0
+      border-bottom: none
+    &:nth-of-type(n+2)
+      +mq
+        margin-top: 30px
+  &__box
+    &--column4
+      +mq
+        width: 25%
+      &:nth-child(n+5)
+        +mq
+          margin-top: 30px
+  &__column
+    &--other
+      padding-left: 1rem
+      +mq
+        display: flex
+        flex-wrap: wrap
+        padding-left: 0
+      &__child
+        color: $primary_
+        +mq
+          width: 33%
+        &:first-child
+          margin-top: 20px
+          +mq
+            margin-top: 0
+        &:nth-child(n+2)
+          margin-top: 25px
+          +mq
+            margin-top: 0
+        &:nth-child(n+4)
+          +mq
+            margin-top: 10px
+        &:nth-child(-n+3)
+          +mq
+            margin-top: 15px
+            
+// movieModal
+// ----------------------- //
+.movieModal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  z-index: -9999
+  transition: all .3s
+
+.movieModal__inner
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  max-height: 100vh
+  padding: 20px
+  overflow-y: scroll
+  +mq
+    padding-right: 0
+    padding-left: 0
+
+.movieModal__contents
+  width: 100%
+  margin: 0 auto
+  max-width: 853px
+  //max-height: 480px;
+  //padding: 0 10px;
+  iframe
+    width: 100%
+    height: calc(59vw - 36px)
+  +mq
+    //padding: 0;
+    iframe
+      max-height: 480px
+
+.movieModal__contents__close
+  text-align: right
+  color: $primary_
+  font-size: 22px
+  margin-bottom: 30px
+  +mq
+    margin-bottom: 20px
+    transition: all 0.6s
+    cursor: pointer
+    &:hover
+      opacity: 0.8
+.c-modal
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, .8)
+  justify-content: center
+  align-items: center
+  z-index: 25
+  display: none
+  &__inner
+    //IE利用者への警告モーダル
+    &--ie
+      background-color: #fff
+      max-width: 800px
+      width: 90vw
+      position: relative
+      padding: 40px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__close
+        cursor: pointer
+        &:before
+          font-size: 2rem
+          color: $text
+          line-height: 1
+          position: absolute
+          top: 20px
+          right: 20px
+      &__warning
+        &:before
+          font-size: 6rem
+          color: $secondary
+          line-height: 1
+      &__heading
+        font-size: 2.4rem
+        line-height: 1
+        font-weight: bold
+        margin-bottom: 0
+        margin-top: 30px
+      &__body
+        font-size: 1.4rem
+        line-height: 1.71
+        color: $text
+        margin-top: 30px
+        text-align: center
+        &:nth-of-type(n+2)
+          margin-top: 3rem
+      &__btn
+        padding: 0 20px
+        height: 40px
+        border-radius: 2px
+        border: solid 1px $primary_
+        background-color: $primary
+        margin-top: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $primary_
+        font-size: 1.4rem
+        transition: all .1s ease-out
+        &:hover
+          background-color: $base
+          border: none
+          color: $primary

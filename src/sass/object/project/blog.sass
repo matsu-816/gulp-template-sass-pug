@@ -1,0 +1,206 @@
+.blogArchive-subTtl
+  padding-bottom: 10px
+  color: $base
+  line-height: 1
+
+.blogArchive-img
+  position: relative
+  height: 26.6vw
+  overflow: hidden
+  > img
+    position: absolute
+    top: 50%
+    left: 50%
+    height: 100%
+    transform: translate(-50%, -50%)
+    transition: all .3s
+  +mq
+    height: 14.4vw
+    max-width: 230px
+    max-height: 150px
+
+.blogArchive-ttl
+  color: $text
+
+.blogArchive-date
+  color: $primary_
+
+.contentsBox--blogDetail__mainVisual
+  background-color: $back
+  padding-right: 30px
+  padding-left: 30px
+  +mq
+    padding-right: 0
+    padding-left: 0
+
+.contentsBox--blogDetail__mainVisual__inner
+  position: relative
+  height: 50vw
+  margin-right: auto
+  margin-left: auto
+  overflow: hidden
+  > img
+    position: absolute
+    top: 50%
+    left: 50%
+    height: 100%
+    transform: translate(-50%, -50%)
+  +mq
+    max-width: 580px
+    max-height: 340px
+
+.contentsBox--blogDetail__inner
+  margin-right: auto
+  margin-left: auto
+  padding-right: 30px
+  padding-left: 30px
+  +mq
+    max-width: 580px
+    padding-right: 0
+    padding-left: 0
+
+.contentsBox--blogDetail__date
+  color: $primary_
+
+.contentsBox--blogDetail__ttl
+  line-height: 1.6
+  margin-top: 10px
+  margin-bottom: 20px
+//@include mq() {
+//  margin-top: 10px;
+//}
+
+.contentsBox--blogDetail__head
+  padding-bottom: 20px
+  border-bottom: 1px solid $line
+  +mq
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-bottom: 10px
+
+.contentsBox--blogDetail__foot
+
+.contentsBox--blogDetail__head__sns
+  display: flex
+  align-items: center
+  margin-top: 10px
+  .fb-share-button
+    margin-top: -2px
+  .fb-share-button,
+  .c-button--sns--twitter
+    margin-right: 7px
+  +mq
+    margin-top: 0
+    justify-content: flex-end
+
+.contentsBox--blogDetail__content
+  padding-bottom: 55px
+  +mq
+    padding-bottom: 120px
+  > h2
+    position: relative
+    margin-top: 40px
+    padding: 10px 0
+    border-bottom: solid 2px #ccc
+    line-height: 1.6
+  > h3
+    line-height: 1.6
+  > p
+    margin-bottom: 25px
+    line-height: 2
+    +mq
+      margin-bottom: 35px
+  img
+    max-width: 100%
+
+.contentsBox--blogDetail__content--first
+  @extend .contentsBox--blogDetail__content
+  padding-top: 30px
+  padding-bottom: 25px
+  +mq
+    padding-bottom: 50px
+
+
+.contentsBox--blogDetail__jobBox
+  margin-right: auto
+  margin-left: auto
+  border-top: 1px solid $primary__
+  border-bottom: 1px solid $primary__
+  padding: 10px 10px 40px 10px
+  +mq
+    max-width: 580px
+    padding: 20px 30px 40px 30px
+
+.contentsBox--blogDetail__jobArea__btnBox
+  margin-top: -20px
+  padding-right: 20px
+  padding-left: 20px
+  text-align: center
+  +mq
+    margin-top: -30px
+
+.contentsBox--blogDetail__content__bottom
+  padding: 20px
+  background-color: $back
+  line-height: 2.25
+  +mq
+    padding: 40px
+
+.linkArchive
+  text-align: center
+  > a
+    color: $text
+  .c-icon--arrow_05
+    display: inline-block
+    margin-left: 10px
+    color: $text
+    transform: rotate(180deg)
+
+.contentsBox--blogDetail__related
+  padding: 10px 10px 80px 10px
+  background-color: $back
+  .c-title--primary
+    border-bottom: none
+    +mq
+      padding-right: 25px
+      padding-left: 25px
+  +mq
+    padding-bottom: 10px
+
+.categoryList
+  height: 30px
+  overflow-y: hidden
+
+.categoryList__inner
+  overflow-x: auto
+  overflow-y: hidden
+  white-space: nowrap
+  -webkit-overflow-scrolling: touch
+  margin: 0 auto
+  padding: 0 20px 50px !important
+  text-align: center
+
+.categoryList__item
+  display: inline-block
+  line-height: 1
+  margin-right: 10px
+  a
+    display: block
+    color: $base
+    border: 1px solid $base
+    border-radius: 50px
+    background-color: #fff
+    transition: all .3s
+    font-size: 14px
+    padding: 7px 10px
+  &:hover, &.is-current
+    a
+      color: #fff
+      background-color: $base
+      font-weight: 500
+  +mq
+    margin-right: 7px
+    a
+      font-size: 12px
+      padding: 8px 10px

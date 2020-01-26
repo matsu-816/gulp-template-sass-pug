@@ -1,0 +1,39 @@
+*
+	box-sizing: border-box
+	appearance: none
+
+html
+	font-size: 62.5%
+
+body
+	position: relative
+	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, Verdana, Meiryo, sans-serif
+	font-size: 1.4rem
+	line-height: 1.6
+	-webkit-text-size-adjust: 100%
+	color: $text_
+	&.pageNoFooter
+		+mq
+		padding-bottom: 0
+
+a
+	cursor: pointer
+	outline: none
+	-webkit-touch-callout: none
+	&:link, &:visited, &:active, &:hover
+		text-decoration: none
+
+form
+	margin-bottom: 0
+
+input[type="checkbox"], input[type="radio"]
+	display: none
+
+figure, dd, ul, p
+	margin: 0
+
+select::-ms-expand
+	display: none
+
+p
+	color: green
